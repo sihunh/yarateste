@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/lib/lightbox/css/lightbox.min.css" /><link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/content/font.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075" /><link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/content/content.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075" /><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script><!--<![endif]-->
+<script src="https://t1.daumcdn.net/tistory_admin/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+<script>
+lightbox.options.fadeDuration = 200;
+lightbox.options.resizeDuration = 200;
+lightbox.options.wrapAround = false;
+lightbox.options.albumLabel = "%1 / %2";
+</script>
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="icon" href="//t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico" /><link rel="apple-touch-icon" href="//img1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F241F093D5701E73803">
+<link rel="apple-touch-icon" sizes="76x76" href="//img1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F241F093D5701E73803">
+<link rel="apple-touch-icon" sizes="120x120" href="//img1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F241F093D5701E73803">
+<link rel="apple-touch-icon" sizes="152x152" href="//img1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F241F093D5701E73803">
+<meta name="google-adsense-platform-account" content="ca-host-pub-9691043933427338">
+<meta name="google-adsense-platform-domain" content="tistory.com">
+<meta name="description" content="특정 사이트 해킹 및 웹쉘 탐지 (피해 예방을 위한 구글 키워드 검색과 함께) 특정 사이트 해킹 등 웹쉘 흔적 탐지 확인 1. 저는 최근 특정한 민간 사이트 해킹 피해 예방을 위해 구글사이트를 이용한 웹쉘 탐지..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="https://new-fkc.tistory.com/8" /><meta property="og:type" content="article"><meta property="og:url" content="https://new-fkc.tistory.com/8" ><meta property="og:article:author" content="수미수미" ><meta property="og:site_name" content="Famous Korean Celebrities" ><meta property="og:title" content="웹쉘 사이트 발견 및 탐지(구글검색 중심으로)" ><meta name="by" content="수미수미" ><meta property="og:description" content="특정 사이트 해킹 및 웹쉘 탐지 (피해 예방을 위한 구글 키워드 검색과 함께) 특정 사이트 해킹 등 웹쉘 흔적 탐지 확인 1. 저는 최근 특정한 민간 사이트 해킹 피해 예방을 위해 구글사이트를 이용한 웹쉘 탐지.." ><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRi94c%2Fbtrh7xU2W46%2F0j9eeqhQIaT9z7kVZKYLn1%2Fimg.png" ><meta property="article:section" content="IT 인터넷" >
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="웹쉘 사이트 발견 및 탐지(구글검색 중심으로)" ><meta name="twitter:description" content="특정 사이트 해킹 및 웹쉘 탐지 (피해 예방을 위한 구글 키워드 검색과 함께) 특정 사이트 해킹 등 웹쉘 흔적 탐지 확인 1. 저는 최근 특정한 민간 사이트 해킹 피해 예방을 위해 구글사이트를 이용한 웹쉘 탐지.." ><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRi94c%2Fbtrh7xU2W46%2F0j9eeqhQIaT9z7kVZKYLn1%2Fimg.png" >
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="https://new-fkc.tistory.com/8" ><meta name="plink" content="https://new-fkc.tistory.com/8" ><meta name="title" content="웹쉘 사이트 발견 및 탐지(구글검색 중심으로)" ><meta name="article:media_name" content="Famous Korean Celebrities" ><meta property="article:mobile_url" content="https://new-fkc.tistory.com/m/8" ><meta property="article:pc_url" content="https://new-fkc.tistory.com/8" ><meta property="article:mobile_view_url" content="https://new-fkc.tistory.com/m/8" ><meta property="article:pc_view_url" content="https://new-fkc.tistory.com/8" ><meta property="article:talk_channel_view_url" content="https://new-fkc.tistory.com/m/8" ><meta property="article:pc_service_home" content="https://www.tistory.com" ><meta property="article:mobile_service_home" content="https://www.tistory.com/m" ><meta property="article:txid" content="5001208_8" /><meta property="article:published_time" content="2021-10-19T12:00:51+09:00" ><meta property="og:regDate" content="20211018200400" ><meta property="article:modified_time" content="2021-11-25T12:53:57+09:00" >
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https:\/\/new-fkc.tistory.com\/8"},"url":"https:\/\/new-fkc.tistory.com\/8","headline":"\uc6f9\uc258 \uc0ac\uc774\ud2b8 \ubc1c\uacac \ubc0f \ud0d0\uc9c0(\uad6c\uae00\uac80\uc0c9 \uc911\uc2ec\uc73c\ub85c)","description":"\ud2b9\uc815 \uc0ac\uc774\ud2b8 \ud574\ud0b9 \ubc0f \uc6f9\uc258 \ud0d0\uc9c0 (\ud53c\ud574 \uc608\ubc29\uc744 \uc704\ud55c \uad6c\uae00 \ud0a4\uc6cc\ub4dc \uac80\uc0c9\uacfc \ud568\uaed8) \ud2b9\uc815 \uc0ac\uc774\ud2b8 \ud574\ud0b9 \ub4f1 \uc6f9\uc258 \ud754\uc801 \ud0d0\uc9c0 \ud655\uc778 1. \uc800\ub294 \ucd5c\uadfc \ud2b9\uc815\ud55c \ubbfc\uac04 \uc0ac\uc774\ud2b8 \ud574\ud0b9 \ud53c\ud574 \uc608\ubc29\uc744 \uc704\ud574 \uad6c\uae00\uc0ac\uc774\ud2b8\ub97c \uc774\uc6a9\ud55c \uc6f9\uc258 \ud0d0\uc9c0..","author":{"@type":"Person","name":"\uc218\ubbf8\uc218\ubbf8"},"image":{"@type":"ImageObject","url":"https:\/\/img1.daumcdn.net\/thumb\/R800x0\/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRi94c%2Fbtrh7xU2W46%2F0j9eeqhQIaT9z7kVZKYLn1%2Fimg.png","width":"800px","height":"800px"},"datePublished":"20211019T12:00:51+09:00","dateModified":"20211125T12:53:57+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/images\/openGraph\/opengraph.png","width":"800px","height":"800px"}}}</script><meta name="robots" content="max-image-preview:large">
+<!-- END STRUCTURED_DATA -->
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="naver-site-verification" content="0784990888912ea2359b7f48992d1fd4bd2f1332" />
+	<meta name="google-site-verification" content="BikaDTg_hFaUgs2YGH97E7EasXKXdaSvVKTwjnysBbg" />
+<title>생활정보</title>
+<link rel="stylesheet" href="https://tistory1.daumcdn.net/tistory/5001208/skin/style.css?_T_=1635147149">
+<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+
+.entry-content a, .post-header h1 em, .comments h2 .count {color:#04beb8}
+.comment-form .submit button:hover, .comment-form .submit button:focus {background-color:#04beb8}
+
+
+
+</style>
+<meta http-equiv="imagetoolbar" content="no"/><!-- BEGIN GOOGLE_SITE_VERIFICATION -->
+<meta name="google-site-verification" content="BikaDTg_hFaUgs2YGH97E7EasXKXdaSvVKTwjnysBbg" />
+<!-- END GOOGLE_SITE_VERIFICATION --><script async src="https://www.googletagmanager.com/gtag/js?id=290223776"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','290223776');
+</script>
+<style type="text/css">
+		#daumSearchBox {
+			height: 21px;
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+			margin: 5px auto ;
+			padding: 0;
+		}
+		#daumSearchBox input {
+			background: none;
+			margin : 0;
+			padding : 0;
+			border : 0;
+		}
+		#daumSearchBox #daumLogo {
+			width: 34px;
+			height: 21px;
+			float: left;
+			margin-right: 5px;
+			background-image : url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+		}
+		#daumSearchBox #show_q {
+			background-color: transparent;
+			border: none;
+			font: 12px Gulim, Sans-serif;
+			color: #555;
+			margin-top: 4px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#daumSearchBox #show_btn {
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+			width: 37px;
+			height: 21px;
+			float: left;
+			margin:0;
+			cursor:pointer;
+			text-indent:-1000em;
+		}
+	</style>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/plugins/TistoryProfileLayer/style.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075" />
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/plugins/TistoryProfileLayer/profile.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        
+        window.TistoryBlog = {
+            basePath: "",
+            url: "https://new-fkc.tistory.com",
+            tistoryUrl: "https://new-fkc.tistory.com",
+			manageUrl: 'https://new-fkc.tistory.com/manage',
+            token: 'UmisBAP2Op0/3cCZJGx04Q=='
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script type="text/javascript" defer src=https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/reaction/reaction-button-container.min.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075></script>
+    <script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+        <script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/_/base.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"></script>
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/dialog.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"/>
+            <link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/tistory_admin/www/style/top/font.css">
+    <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/postBtn.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"/>
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/component/tistory.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075" />
+        <script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/style/revenue.css?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"/></head>
+<body id="tt-body-page" class="layout-aside-right paging-number">
+<script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/9","NEXT_PAGE":"\/7","BLOG":{"isDormancy":false,"title":"Famous Korean Celebrities"},"NEED_COMMENT_LOGIN":true,"COMMENT_LOGIN_CONFIRM_MESSAGE":"\uc774 \ube14\ub85c\uadf8\ub294 \ub85c\uadf8\uc778\ud55c \uc0ac\uc6a9\uc790\uc5d0\uac8c\ub9cc \ub313\uae00 \uc791\uc131\uc744 \ud5c8\uc6a9\ud588\uc2b5\ub2c8\ub2e4. \uc9c0\uae08 \ub85c\uadf8\uc778\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fnew-fkc.tistory.com%2F8","DEFAULT_URL":"https:\/\/new-fkc.tistory.com","USER":{"name":null,"homepage":null},"ROLE_GROUP":"visitor","SUBSCRIPTION":{"status":"none","isConnected":false,"isProcessing":false,"isPending":false,"isWait":false,"isNone":true},"IS_LOGIN":false,"HAS_BLOG":false,"TOP_URL":"https:\/\/www.tistory.com","JOIN_URL":"https:\/\/www.tistory.com\/member\/join"};
+		window.appInfo = {"domain":"tistory.com","topUrl":"https:\/\/www.tistory.com","loginUrl":"https:\/\/www.tistory.com\/auth\/login","logoutUrl":"https:\/\/www.tistory.com\/auth\/logout"};
+
+        window.initData = {};
+        
+	})();
+</script>
+
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/blog/common.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+<div id="acc-nav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<header id="header">
+		<div class="inner">
+			<h1>
+				<a href="/">
+					
+					
+						Famous Korean Celebrities
+					
+				</a>
+			</h1>
+			<div class="util">
+				<div class="search">
+					
+						<input type="text" name="search" value="" placeholder="검색내용을 입력하세요." onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
+						<button type="submit" onclick="try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){}">검색</button>
+					
+				</div>
+				<div class="profile">
+					<button type="button"><img src="https://t1.daumcdn.net/tistory_admin/static/manage/images/r3/default_L.png" alt="블로그 이미지" /></button>
+					<nav>
+						<ul>
+							<li><a href="https://new-fkc.tistory.com/manage">관리</a></li>
+							<li><a href="https://new-fkc.tistory.com/manage/entry/post ">글쓰기</a></li>
+							<li class="login"><a href="#">로그인</a></li>
+							<li class="logout"><a href="#">로그아웃</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="menu"><span>메뉴</span></button>
+			</div>
+			<nav id="gnb">
+				<ul>		<li class="t_menu_home first">
+			<a href="/">홈</a>
+		</li>
+				<li class="t_menu_tag last">
+			<a href="/tag">태그</a>
+		</li>
+		</ul>
+			</nav>
+		</div>
+	</header>
+	<section id="container">
+		
+		<div class="content-wrap">
+			<article id="content">
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				<div class="inner">
+					
+
+						
+
+						
+							<div class="post-cover" style="background-image:url(https://blog.kakaocdn.net/dn/Ri94c/btrh7xU2W46/0j9eeqhQIaT9z7kVZKYLn1/img.png)">
+								<div class="inner">
+									<span class="category">기술의 달인</span>
+									<h1>웹쉘 사이트 발견 및 탐지(구글검색 중심으로)</h1>
+									<span class="meta">
+										<span class="author">by 수미수미</span>
+										<span class="date">2021. 10. 19.</span>
+										
+									</span>
+								</div>
+							</div>
+
+							<div class="entry-content">
+								<div class="tt_article_useless_p_margin contents_style"><p style="text-align: center;" data-ke-size="size16"><span>특정 사이트 해킹 및 웹쉘 탐지 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>(</span><span>피해 예방을 위한 구글 키워드 검색과 함께</span><span>)</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<blockquote data-ke-style="style2"><span style="color: #ee2323;">특정 사이트 해킹 등 웹쉘 흔적 탐지 확인</span></blockquote>
+<p style="text-align: center;" data-ke-size="size16"><span>1. 저는 최근 특정한 민간 사이트 해킹 피해 예방을 위해 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>구글사이트를 이용한 웹쉘 탐지 키워드를 연구하였고 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>그 결과 한 특정 사이트에서 웹쉘이 업로드 되어 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>해킹된 흔적이 있는&nbsp;</span><span>민간 사이트를 발견하였고</span><span>&nbsp;</span></p>
+<p style="text-align: center;" data-ke-size="size16"><span><b><span style="color: #006dd7;">사이트 소유자에 추가피해 방지 및 예방책 안내 및 해킹사실 안내</span></b>했습니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p><figure class='imageblock alignCenter' data-origin-width='569' data-origin-height='463' data-ke-mobilestyle='alignCenter'><span data-url='https://blog.kakaocdn.net/dn/Ri94c/btrh7xU2W46/0j9eeqhQIaT9z7kVZKYLn1/img.png' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/Ri94c/btrh7xU2W46/0j9eeqhQIaT9z7kVZKYLn1/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRi94c%2Fbtrh7xU2W46%2F0j9eeqhQIaT9z7kVZKYLn1%2Fimg.png' data-ke-mobilestyle='alignCenter'/></span></figure></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>2. </span><span>상기 사이트는 운동기구 관련 사이트로 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>파일을 업로드 할 수 있는 게시판으로 구성되어 있었습니다</span><span>. </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>하지만 위와 같이 서버에 파일을 업로드 할 수 있는 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span><span style="color: #009a87;"><b>어느 특정한 웹쉘 코드가 삽입</b></span>되어 있는 것이 발견되었습니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>[ </span><span>아래 주소 확인 </span><span>]</span></p>
+<p style="text-align: center;" data-ke-size="size16"><span><a href="http://smrobotics.net/skin31/request.php?unsingcode1=1313169244&amp;unsingcode2=1313591110&amp;code=bd91f5dcb3e4898b9ca6e031c7fb2e19">http://xxxxxxxxxxxxx.net/skin31/request.php?unsingcode1=1313169244&amp;unsingcode2=1313591110&amp;code=bd91f5dcb3e4898b9ca6e031c7fb2e19</a></span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>※ </span><span>위 주소는 실제 주소가 변경된 주소입니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>3. </span><span>아래와 같이 </span><span>&ldquo;simpleCMDshell&rdquo;</span><span>라는 웹쉘 이름으로 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>제작자는&nbsp;</span><span>&ldquo;BodenTruppe&ldquo;</span><span>로 확인되고 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>웹상에서 서버의 쉘 명령어를 실행할 수 있는 코드인 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><b><span style="color: #409d00;">&rdquo;shell_exec&ldquo;</span></b><span><b><span style="color: #409d00;">가 노출되어 있음이 확인</span></b>되었습니다</span><span>.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p><figure class='imageblock alignCenter' data-origin-width='569' data-origin-height='159' data-ke-mobilestyle='alignCenter'><span data-url='https://blog.kakaocdn.net/dn/cqP5xF/btrh9SqGt1Q/OQoPDRJXj3WJe1KOn7vwN1/img.png' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/cqP5xF/btrh9SqGt1Q/OQoPDRJXj3WJe1KOn7vwN1/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcqP5xF%2Fbtrh9SqGt1Q%2FOQoPDRJXj3WJe1KOn7vwN1%2Fimg.png' data-ke-mobilestyle='alignCenter'/></span></figure></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>4. </span><span>해당코드를 소스보기로 확인한 결과 아래와 같은 코드로 구성되어 있습니다</span><span>.</span></p>
+<p style="text-align: center;" data-ke-size="size16"><b><span style="color: #8a3db6;">&lt;!--?php $cmd = stripslashes($_REQUEST["-cmd"]);$sendfile=$_REQUEST["sendfile"];if($sendfile=="true") { $fn=$_FILES["file"]["name"];$tn=$_FILES["file"]["tmp_name"];if(move_uploaded_file($tn, dirname(__FILE__)."/".$fn)) $result="upload done";else $result="upload failed"; } print('&lt;body bgcolor=#000000 text=#008000 onLoad="document.forms[0].elements[-cmd].focus()"--&gt;</span></b></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>5. </span><span>이 사이트의 메인 도메인으로 접속해본 결과 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>아래와 같이 해당 사이트의 메인화면이 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>다음과 같이 만남 사이트로 이동되는 링크로 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>변조 되어 있는 일명 </span><span style="color: #8a3db6;"><b>&rdquo;디페이스 해킹&ldquo;</b></span><span>을 당한 것으로 확인됩니다</span><span>.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p><figure class='imageblock alignCenter' data-origin-width='569' data-origin-height='224' data-ke-mobilestyle='alignCenter'><span data-url='https://blog.kakaocdn.net/dn/b2Q97u/btrh8CaLop3/bgkDkActKtKMdmkKzhqna0/img.png' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/b2Q97u/btrh8CaLop3/bgkDkActKtKMdmkKzhqna0/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb2Q97u%2Fbtrh8CaLop3%2FbgkDkActKtKMdmkKzhqna0%2Fimg.png' data-ke-mobilestyle='alignCenter'/></span></figure></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>6. </span><span>해당 만남 사이트는 현재 접속되지 않는 것으로 확인된다</span><span>.</span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>무섭군요.. 자신도 모르게 사이트 메인화면이 해킹되어있다니요....</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p><figure class='imageblock alignCenter' data-origin-width='569' data-origin-height='280' data-ke-mobilestyle='alignCenter'><span data-url='https://blog.kakaocdn.net/dn/b8rrUs/btriaP1eKIo/4AfhTzAzzBSKvuQi7OecS1/img.png' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/b8rrUs/btriaP1eKIo/4AfhTzAzzBSKvuQi7OecS1/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb8rrUs%2FbtriaP1eKIo%2F4AfhTzAzzBSKvuQi7OecS1%2Fimg.png' data-ke-mobilestyle='alignCenter'/></span></figure></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>7. </span><span>위 도메인도 현재는 등록되지 않은 도메인으로 확인되어 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>이 사이트는 매우 오랜시간전에 해킹되어 방치되고 있는 것으로 판단됩니다</span><span>.</span></p>
+<p><figure class='imageblock alignCenter' data-origin-width='569' data-origin-height='280' data-ke-mobilestyle='alignCenter'><span data-url='https://blog.kakaocdn.net/dn/yc4Pf/btrhZNEbdWx/xK5cpWjH53OvZ7oOHjfbuk/img.png' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/yc4Pf/btrhZNEbdWx/xK5cpWjH53OvZ7oOHjfbuk/img.png' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fyc4Pf%2FbtrhZNEbdWx%2FxK5cpWjH53OvZ7oOHjfbuk%2Fimg.png' data-ke-mobilestyle='alignCenter'/></span></figure></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>8. </span><span>위 사이트의 해킹 흔적</span><span>, </span><span>사이트 상태</span><span>, </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>디페이스의 흔적을 종합적으로 검토한 결과 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>매우 오래전에 해킹되었던 것으로 판단됩니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+
+<blockquote data-ke-style="style2"><span style="color: #ee2323;"><b>웹쉘코드 키워드 기반 구글 검색</b></span></blockquote>
+<p style="text-align: center;" data-ke-size="size16"><span>자, 그렇다면 이와 같은 해킹 및 웹쉘을 탐지하기 위해서는</span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>자신의 홈페이지 파일에서 웹쉘 탐색을 생활화 하여야 겠지요...</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>하지만 저와 같이 공익목적으로 하는 사람들은 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>위와 같이 웹상에서 해킹된 쉘명령어를 실행시킬 수 있는 코드 중 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>많은 웹쉘에서 사용되는 코드 몇가지를 키워드로 하여 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>구글 검색하면 될 것입니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">아래와 같은 키워드로 검색해보실까요...</p>
+<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span><span>&lsquo;shell_exec&rsquo;,</span></span><br /><span><span>&lsquo;request.getParameter("cmd");&rsquo;,</span></span><br /><span><span>&lsquo;eval($_POST['</span></span><br /><span><span>getRuntime().exec() shell_exec, passthru, system, exec, popen eval, assert</span></span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>위와 같이 웹쉘에서 애용하는 코드를 키워드로 구글 검색하면 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>현재 웹쉘이 업로드 된 사이트의 발견이 수월할 것입니다</span><span>.</span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>실제 본 문서에 등장하는 사이트도 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>구글에서 위 키워드로 검색하여 확인한 것입니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<blockquote data-ke-style="style2"><b><span style="color: #ee2323;">결론</span></b></blockquote>
+<p style="text-align: center;" data-ke-size="size16"><span>민간사이트의 대부분이 전문 개발자를 두고 있지 않고 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>웹호스팅에 의존하므로 사이트 관리가 안되고 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>해킹 및 취약점의 해결이 안되고 있는 실정입니다.</span><span>&nbsp;</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>하지만 사이트 측에서는 이렇게 간단한 모니터링을 지속적으로 실시하고 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>저 또한 이러한 공익적 작업으로 사이트 소유자에게 통보 및 안내한다면 </span></p>
+<p style="text-align: center;" data-ke-size="size16"><span>더욱 큰 해킹이나 웹쉘의 피해를 예방할 수 있을 것입니다.</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><span>해킹과 웹쉘은 또다른 피해를 양산하니까요~</span></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p><div class="container_postbtn #post_button_group">
+    <div class="postbtn_like">
+        
+<script>
+    window.ReactionButtonType = 'reaction';
+    window.ReactionApiUrl = '//new-fkc.tistory.com/reaction';
+    window.ReactionReqBody = {
+        entryId: 8    }
+</script>
+<div class="wrap_btn" id=reaction-8></div>
+<script src=https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/reaction/reaction-button-container.min.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075></script>
+        <div class="wrap_btn wrap_btn_share">
+    <button type="button" class="btn_post sns_btn btn_share" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRi94c%2Fbtrh7xU2W46%2F0j9eeqhQIaT9z7kVZKYLn1%2Fimg.png" data-title="웹쉘 사이트 발견 및 탐지(구글검색 중심으로)" data-description="특정 사이트 해킹 및 웹쉘 탐지 (피해 예방을 위한 구글 키워드 검색과 함께) 특정 사이트 해킹 등 웹쉘 흔적 탐지 확인 1. 저는 최근 특정한 민간 사이트 해킹 피해 예방을 위해 구글사이트를 이용한 웹쉘 탐지.." data-profile-image="https://t1.daumcdn.net/tistory_admin/static/manage/images/r3/default_L.png" data-profile-name="수미수미" data-pc-url="https://new-fkc.tistory.com/8" data-relative-pc-url="/8" data-blog-title="Famous Korean Celebrities">
+        <span class="ico_postbtn ico_share">공유하기</span>
+    </button>
+</div>
+                <div class="wrap_btn wrap_btn_etc" data-entry-id="8" data-entry-visibility="public" data-category-visibility="public">
+    <button type="button" class="btn_post btn_etc2"><span class="ico_postbtn ico_etc">글 요소</span></button>
+</div>
+    </div>
+    <button type="button" class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="5001208" data-url="https://new-fkc.tistory.com/8" data-device="web_pc">
+    <em class="txt_state">구독하기</em>
+    <strong class="txt_tool_id">Famous Korean Celebrities</strong>
+    <span class="img_common_tistory ico_check_type1"></span>
+</button>
+    <div class="postbtn_ccl" data-ccl-type="3">
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span>        </span>
+    </a>
+</div>
+    <!--
+<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="http://creativecommons.org/licenses/by-fr/2.0/kr/" />
+    </Work>
+    <License rdf:about="http://creativecommons.org/licenses/by-fr/">
+        <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+                <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+                    </License>
+</rdf:RDF>
+-->
+</div><div class="another_category another_category_color_gray">
+<h4>'<a href="/category/기술의%20달인">기술의 달인</a>' 카테고리의 다른 글</h4>
+<table>
+<tr>
+<th>
+<a href="/14?category=1017907" >도메인의 모든것 viewdns.info</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.11.25</td>
+</tr>
+<tr>
+<th>
+<a href="/11?category=1017907" >통신판매사업자 정보 200% 활용하기 !!</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.11.04</td>
+</tr>
+<tr>
+<th>
+<a href="/10?category=1017907" >후이즈로 아이피, 서버 정보 확인하기 WHOIS와 IP는 무엇인가?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.10.29</td>
+</tr>
+<tr>
+<th>
+<a href="/9?category=1017907" >네트워크란 무엇인가?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.10.20</td>
+</tr>
+<tr>
+<th>
+<a href="/8?category=1017907"  class ="current" >웹쉘 사이트 발견 및 탐지(구글검색 중심으로)</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.10.19</td>
+</tr>
+<tr>
+<th>
+<a href="/5?category=1017907" >NFT 가 도대체 무엇인가?</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.10.16</td>
+</tr>
+</table></div></div>
+							</div>
+
+							
+								<div class="tags">
+									<h2>태그</h2>
+									<a href="/tag/%EC%9B%B9%EC%89%98"  rel="tag">웹쉘</a>,
+<a href="/tag/%EC%9B%B9%EC%89%98%20%ED%83%90%EC%A7%80"  rel="tag">웹쉘 탐지</a>,
+<a href="/tag/%EC%9B%B9%EC%89%98%ED%83%90%EC%A7%80"  rel="tag">웹쉘탐지</a>,
+<a href="/tag/%EC%9B%B9%EC%89%98%ED%94%BC%ED%95%B4"  rel="tag">웹쉘피해</a>,
+<a href="/tag/%ED%95%B4%ED%82%B9"  rel="tag">해킹</a>,
+<a href="/tag/%ED%95%B4%ED%82%B9%ED%94%BC%ED%95%B4"  rel="tag">해킹피해</a>
+								</div>
+							
+
+							
+								<div class="related-articles">
+									<h2>관련글</h2>
+									<ul>
+										
+											<li>
+												<a href="/11?category=1017907">
+													<figure>
+														
+															<img src="//i1.daumcdn.net/thumb/C176x120/?fname=https://blog.kakaocdn.net/dn/bPEyoC/btrjTY23ZgK/GeTYQhxkAlSIABJUctpYEK/img.png" alt="">
+														
+													</figure>
+													<span class="title">통신판매사업자 정보 200% 활용하기 !!</span>
+												</a>
+											</li>
+										
+											<li>
+												<a href="/10?category=1017907">
+													<figure>
+														
+															<img src="//i1.daumcdn.net/thumb/C176x120/?fname=https://blog.kakaocdn.net/dn/bt1s1E/btrjkldnhNr/l8BKIAIm6kEBCfzzJVhNY0/img.png" alt="">
+														
+													</figure>
+													<span class="title">후이즈로 아이피, 서버 정보 확인하기 WHOIS와 IP는 무엇인가?</span>
+												</a>
+											</li>
+										
+											<li>
+												<a href="/9?category=1017907">
+													<figure>
+														
+															<img src="//i1.daumcdn.net/thumb/C176x120/?fname=https://blog.kakaocdn.net/dn/bf6wKe/btriac3xGnE/QyutLuSlrH0B2meIG9qdTk/img.png" alt="">
+														
+													</figure>
+													<span class="title">네트워크란 무엇인가?</span>
+												</a>
+											</li>
+										
+											<li>
+												<a href="/5?category=1017907">
+													<figure>
+														
+															<img src="//i1.daumcdn.net/thumb/C176x120/?fname=https://blog.kakaocdn.net/dn/dH5l4i/btrhVYRU7yl/zpKap8IKxWbfIfjHi4u1i0/img.png" alt="">
+														
+													</figure>
+													<span class="title">NFT 가 도대체 무엇인가?</span>
+												</a>
+											</li>
+										
+									</ul>
+								</div>
+							
+
+							<div class="comments">
+									<h2>댓글<span class="count"><span id="commentCount8_0">0</span></span></h2>
+									<div id="entry8Comment">
+										
+
+										<form method="post" action="/comment/add/8" onsubmit="return false" style="margin: 0"></form>
+								</div><script type="text/javascript">loadedComments[8]=true;findFragmentAndHighlight(8)</script>
+							</div>
+						
+
+					
+
+				</div>
+
+				
+
+				
+
+				
+					<div class="pagination">
+						<a  href='/9' class="prev ">이전</a>
+						
+							<a  href='/14'><span >1</span></a>
+						
+							<a ><span >&middot;&middot;&middot;</span></a>
+						
+							<a  href='/12'><span >3</span></a>
+						
+							<a  href='/11'><span >4</span></a>
+						
+							<a  href='/10'><span >5</span></a>
+						
+							<a  href='/9'><span >6</span></a>
+						
+							<a ><span class="selected">7</span></a>
+						
+							<a  href='/7'><span >8</span></a>
+						
+							<a  href='/6'><span >9</span></a>
+						
+							<a  href='/5'><span >10</span></a>
+						
+							<a  href='/4'><span >11</span></a>
+						
+							<a ><span >&middot;&middot;&middot;</span></a>
+						
+							<a  href='/2'><span >13</span></a>
+						
+						<a  href='/7' class="next ">다음</a>
+					</div>
+				
+
+				
+
+			</article>
+			<aside id="aside" class="sidebar">
+
+					<div class="sidebar-1">
+						            
+								<!-- 카테고리 -->
+								<nav class="category">
+									<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="/category">
+			분류 전체보기							<span class="c_cnt">(13)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="/category/%EB%B2%94%EC%A3%84%EC%98%88%EB%B0%A9%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						범죄예방의 달인													<span class="c_cnt">(3)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B2%BD%EC%A0%9C%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						경제의 달인													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B8%B0%EC%88%A0%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						기술의 달인													<span class="c_cnt">(6)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B1%B4%EA%B0%95%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						건강의 달인													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B2%8C%EC%9E%84%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						게임의 달인													<span class="c_cnt">(2)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EB%9C%A8%EA%B0%9C%EC%A7%88%EC%9D%98%20%EB%8B%AC%EC%9D%B8">
+						뜨개질의 달인													<span class="c_cnt">(0)</span>
+						
+											</a>
+
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+								</nav>
+							
+					</div>
+					<div class="sidebar-2">
+						
+								<!-- 공지사항 -->
+								
+									<div class="notice">
+										<h2>공지사항</h2>
+										<ul>
+											
+										</ul>
+									</div>
+								
+							
+								<!-- 최근글/인기글 -->
+								<div class="post-list tab-ui">
+									<div id="recent" class="tab-list">
+										<h2>최근글</h2>
+										<ul>
+											
+												<li>
+													<a href="/14">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbKRW4d%2Fbtrl6KPl7xN%2F3wWka7PakDljTkJbCo1mg0%2Fimg.png" alt="" />
+														
+														<span class="title">도메인의 모든것 viewdns.⋯</span>
+														<span class="date">2021.11.25</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/13">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlTlw0%2FbtrlYQXYCW2%2FGyls2Knc70AKDl8YEFrUH0%2Fimg.webp" alt="" />
+														
+														<span class="title">무서운 이메일 무역사기(⋯</span>
+														<span class="date">2021.11.24</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/12">
+														
+														<span class="title">인벤PC in G-STAR 2021 영⋯</span>
+														<span class="date">2021.11.16</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/11">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPEyoC%2FbtrjTY23ZgK%2FGeTYQhxkAlSIABJUctpYEK%2Fimg.png" alt="" />
+														
+														<span class="title">통신판매사업자 정보 200%⋯</span>
+														<span class="date">2021.11.04</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/10">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbt1s1E%2FbtrjkldnhNr%2Fl8BKIAIm6kEBCfzzJVhNY0%2Fimg.png" alt="" />
+														
+														<span class="title">후이즈로 아이피, 서버 정⋯</span>
+														<span class="date">2021.10.29</span>
+													</a>
+												</li>
+											
+										</ul>
+									</div>
+									<div id="popular" class="tab-list">
+										<h2>인기글</h2>
+										<ul>
+											
+												<li>
+													<a href="/10">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbt1s1E%2FbtrjkldnhNr%2Fl8BKIAIm6kEBCfzzJVhNY0%2Fimg.png" alt="" />
+														
+														<span class="title">후이즈로 아이피, 서버 정⋯</span>
+														<span class="date">2021.10.29</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/11">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPEyoC%2FbtrjTY23ZgK%2FGeTYQhxkAlSIABJUctpYEK%2Fimg.png" alt="" />
+														
+														<span class="title">통신판매사업자 정보 200%⋯</span>
+														<span class="date">2021.11.04</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/13">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlTlw0%2FbtrlYQXYCW2%2FGyls2Knc70AKDl8YEFrUH0%2Fimg.webp" alt="" />
+														
+														<span class="title">무서운 이메일 무역사기(⋯</span>
+														<span class="date">2021.11.24</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/14">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbKRW4d%2Fbtrl6KPl7xN%2F3wWka7PakDljTkJbCo1mg0%2Fimg.png" alt="" />
+														
+														<span class="title">도메인의 모든것 viewdns.⋯</span>
+														<span class="date">2021.11.25</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/12">
+														
+														<span class="title">인벤PC in G-STAR 2021 영⋯</span>
+														<span class="date">2021.11.16</span>
+													</a>
+												</li>
+											
+										</ul>
+									</div>
+								</div>
+							
+								<!-- 최근댓글 -->
+								<div class="recent-comment">
+									<h2>최근댓글</h2>
+									<ul>
+										
+									</ul>
+								</div>
+							
+								<!-- Facebook/Twitter -->
+								<div class="social-list tab-ui">
+									
+									
+								</div>
+							
+						
+								<!-- 태그 -->
+								<div class="tags">
+									<h2>태그</h2>
+									
+										<a href="/tag/%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%8B%A8%EC%A7%80">국제금융단지</a>
+									
+										<a href="/tag/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%ED%86%B5%EC%8B%A0">네트워크통신</a>
+									
+										<a href="/tag/%EB%8C%80%EC%9E%A5%EB%8B%98%EC%9D%98%20%EC%A0%84%EC%84%A4">대장님의 전설</a>
+									
+										<a href="/tag/%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%ED%83%80%EC%9A%B4">하나금융타운</a>
+									
+										<a href="/tag/NFT%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">NFT란 무엇인가</a>
+									
+										<a href="/tag/%EB%B3%B4%EC%9D%B4%EC%8A%A4%EC%82%AC%EA%B8%B0">보이스사기</a>
+									
+										<a href="/tag/%EC%9B%B9%EC%89%98%ED%94%BC%ED%95%B4">웹쉘피해</a>
+									
+										<a href="/tag/%EB%B3%B4%EC%9D%B4%EC%8A%A4%20%ED%94%BC%EC%8B%B1%20%EC%98%88%EB%B0%A9">보이스 피싱 예방</a>
+									
+										<a href="/tag/%EB%AC%B4%EB%A3%8C%EC%A1%B0%EB%A6%BD">무료조립</a>
+									
+										<a href="/tag/%EB%A7%A4%EC%9A%B0%EC%9A%B0%EC%88%98%20%EC%9D%8C%EC%8B%9D%EC%A0%90">매우우수 음식점</a>
+									
+										<a href="/tag/%ED%94%BC%EC%8B%B1">피싱</a>
+									
+										<a href="/tag/%EB%B3%B4%EC%9D%B4%EC%8A%A4%20%ED%94%BC%EC%8B%B1">보이스 피싱</a>
+									
+										<a href="/tag/viewdns">viewdns</a>
+									
+										<a href="/tag/%EC%82%AC%EA%B8%B0%EB%9E%80">사기란</a>
+									
+										<a href="/tag/%EC%BD%94%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%B2%AD%EB%9D%BC">코스트코청라</a>
+									
+										<a href="/tag/%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%84%9C%EB%B2%84">네이버 서버</a>
+									
+										<a href="/tag/%EC%9D%B8%EB%B2%A4%EC%A7%B1">인벤짱</a>
+									
+										<a href="/tag/NFT%20%EA%B2%8C%EC%9E%84">NFT 게임</a>
+									
+										<a href="/tag/%EC%82%AC%EA%B8%B0">사기</a>
+									
+										<a href="/tag/%EC%9D%8C%EC%8B%9D%EC%A0%90%20%EC%9C%84%EC%83%9D%EB%93%B1%EA%B8%89">음식점 위생등급</a>
+									
+										<a href="/tag/1%EB%85%84%EB%AC%B4%EC%83%81AS%EC%84%9C%EB%B9%84%EC%8A%A4">1년무상AS서비스</a>
+									
+										<a href="/tag/%EB%8F%84%EB%A9%94%EC%9D%B8">도메인</a>
+									
+										<a href="/tag/%ED%95%98%EC%8A%A4%EC%8A%A4%ED%86%A4%20%EC%9A%A9%EB%B3%91%EB%8B%A8">하스스톤 용병단</a>
+									
+										<a href="/tag/%EC%9B%B9%EC%89%98%ED%83%90%EC%A7%80">웹쉘탐지</a>
+									
+										<a href="/tag/%EC%9D%B8%EB%B2%A4PC">인벤PC</a>
+									
+										<a href="/tag/%EC%B2%AD%EB%9D%BC%20%EB%AA%A8%EC%95%84%EB%AF%B8%EB%9E%98%EB%8F%84">청라 모아미래도</a>
+									
+										<a href="/tag/%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%95%84%EC%9D%B4%ED%94%BC">네이버 아이피</a>
+									
+										<a href="/tag/%EC%9B%B9%EC%89%98%20%ED%83%90%EC%A7%80">웹쉘 탐지</a>
+									
+										<a href="/tag/%ED%88%AC%EC%9E%90%20%EC%82%AC%EA%B8%B0">투자 사기</a>
+									
+										<a href="/tag/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98%20%EC%9D%98%EB%AF%B8">네트워크의 의미</a>
+									
+								</div>
+							
+								<!-- 전체 방문자 -->
+								<div class="count">
+									<h2>전체 방문자</h2>
+									<p class="total">871</p>
+									<p>Today : 7</p>
+									<p>Yesterday : 4</p>
+								</div>
+							
+								<!-- 소셜 채널 -->
+								<div class="social-channel">
+									<ul>
+										
+										
+										
+										
+									</ul>
+								</div>
+							
+					</div>
+				</aside>
+		</div>
+	</section>
+	<hr>
+	<footer id="footer">
+		<div class="inner">
+			<div class="order-menu">
+				
+				
+				
+				
+			</div>
+			<a href="#" class="page-top">TOP</a>
+			<p class="meta"></p>
+			<p class="copyright">바른사회만들기범민주시민연합회</p>
+		</div>
+	</footer>
+</div>
+
+<script src="https://tistory1.daumcdn.net/tistory/5001208/skin/images/script.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scala.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+ document.oncontextmenu = new Function ('return false');
+ document.ondragstart = new Function ('return false');
+ document.onselectstart = new Function ('return false');
+  document.body.style.MozUserSelect = 'none';
+</script>
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/plugins/PreventCopyContents/js/functions.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"></script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+	if(!wcs_add) var wcs_add = {};
+	wcs_add["wa"] = encodeURI("	102c3d8372315b0");
+	wcs_do();
+</script>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script>            <script type="text/javascript" src="//t1.daumcdn.net/tiara/js/v1/tiara.min.js"></script>
+            <script type="text/javascript">window.tiara = {"svcDomain":"user.tistory.com","section":"\uae00\ubdf0","trackPage":"\uae00\ubdf0_\ubcf4\uae30","page":"\uae00\ubdf0","key":"5001208-8","customProps":{"userId":0,"blogId":"5001208","role":"guest","filterTarget":false,"trackPage":"\uae00\ubdf0_\ubcf4\uae30","entryId":"8"},"entry":{"entryId":"8","categoryName":"\uae30\uc220\uc758 \ub2ec\uc778","categoryId":"1017907","author":"5108362","authorId":"5108362","image":"5108362","plink":"\/8","tags":["\uc6f9\uc258","\uc6f9\uc258 \ud0d0\uc9c0","\uc6f9\uc258\ud0d0\uc9c0","\uc6f9\uc258\ud53c\ud574","\ud574\ud0b9","\ud574\ud0b9\ud53c\ud574"],"key":"5001208-8"},"sentryDsn":"https:\/\/a53520229cd744e798d42900d76b0e2a@aem-collector.daumkakao.io\/713","kakaoAppKey":"b8aef3eeb03fa312b81795386484f051","appUserId":null};</script>
+            <script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/tiara/tiara.min.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075" defer></script>
+                        <script type="text/javascript">
+                window.roosevelt_params_queue = window.roosevelt_params_queue || [{channel_id: 'dk', channel_label: 'tistory'}];
+            </script>
+            <script type="text/javascript" src="//t1.daumcdn.net/midas/rt/dk_bt/roosevelt_dk_bt.js" async></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="//new-fkc.tistory.com/api" id="editEntry"></iframe>            <div class="#menubar menu_toolbar ">
+                                <h2 class="screen_out">티스토리툴바</h2>
+                                <div class='btn_tool btn_tool_type1' id='menubar_wrapper'></div><div class="btn_tool">
+                    <button class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="5001208" data-url="https://new-fkc.tistory.com" data-device="web_pc">
+                        <strong class="txt_tool_id">Famous Korean Celebrities</strong>
+                        <em class="txt_state">구독하기</em>
+                        <span class="img_common_tistory ico_check_type1"></span>
+                    </button>
+                </div>
+                            </div><script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ea9adf040eedd6ef16ff124fdab244f680d93075/blogs/script/menubar.min.js?_version_=tistory-ea9adf040eedd6ef16ff124fdab244f680d93075"></script>        <div class="layer_tooltip">
+            <div class="inner_layer_tooltip">
+                <p class="desc_g"></p>
+            </div>
+        </div>
+        <div id="tistoryEtcLayer" class="layer_post"></div><div id="tistorySnsLayer" class="layer_post"></div></body>
+</html>

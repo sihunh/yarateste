@@ -1,0 +1,34 @@
+rules\webshells\test.yar
+Detect num :  5
+Detection :  {'data': 'CMD', 'offset': 22982, 'identifier': '$a', 'flags': 27}
+Detection :  {'data': 'cmd', 'offset': 24665, 'identifier': '$a', 'flags': 27}
+Detection :  {'data': 'cmd', 'offset': 24696, 'identifier': '$a', 'flags': 27}
+Detection :  {'data': 'cmd', 'offset': 25009, 'identifier': '$a', 'flags': 27}
+Detection :  {'data': 'cmd', 'offset': 30607, 'identifier': '$a', 'flags': 27}
+file num :  1
+rules\webshells\WShell_APT_Laudanum.yar
+[*]syntax Error[*]
+rules\webshells\WShell_ASPXSpy.yar
+No Detect
+file num :  3
+rules\webshells\WShell_ChinaChopper.yar
+No Detect
+file num :  4
+rules\webshells\Wshell_ChineseSpam.yar
+No Detect
+file num :  5
+rules\webshells\WShell_Drupalgeddon2_icos.yar
+No Detect
+file num :  6
+rules\webshells\Wshell_fire2013.yar
+No Detect
+file num :  7
+rules\webshells\WShell_PHP_Anuna.yar
+No Detect
+file num :  8
+rules\webshells\WShell_PHP_in_images.yar
+No Detect
+file num :  9
+rules\webshells\WShell_THOR_Webshells.yar
+No Detect
+file num :  10

