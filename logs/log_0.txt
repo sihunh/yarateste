@@ -1,29 +1,41 @@
+rules\webshells\CVE-2012-0158.yar
+[*]syntax Error[*]
+rules\webshells\detect_generic_maliciousness_BROAD_SCAN.yar
+[*]syntax Error[*]
+rules\webshells\detect_obfuscation.yar
+[*]syntax Error[*]
+rules\webshells\detect_phpmailer.yar
+No Detect
+rules\webshells\detect_small_malicios.yar
+[*]syntax Error[*]
+rules\webshells\detect_small_uploader.yar
+No Detect
+rules\webshells\detect_webshell.yar
+[*]unicode decode error[*]
+rules\webshells\sql_inject_file_upload.yar
+No Detect
 rules\webshells\test.yar
 No Detect
-file num :  1
+rules\webshells\web_log_review.yar
+[*]syntax Error[*]
+rules\webshells\web_shells.yar
+[*]syntax Error[*]
 rules\webshells\WShell_APT_Laudanum.yar
 [*]syntax Error[*]
 rules\webshells\WShell_ASPXSpy.yar
 No Detect
-file num :  3
 rules\webshells\WShell_ChinaChopper.yar
 No Detect
-file num :  4
 rules\webshells\Wshell_ChineseSpam.yar
 No Detect
-file num :  5
 rules\webshells\WShell_Drupalgeddon2_icos.yar
 No Detect
-file num :  6
 rules\webshells\Wshell_fire2013.yar
 No Detect
-file num :  7
 rules\webshells\WShell_PHP_Anuna.yar
 No Detect
-file num :  8
 rules\webshells\WShell_PHP_in_images.yar
 No Detect
-file num :  9
 rules\webshells\WShell_THOR_Webshells.yar
 No Detect
-file num :  10
+file num :  20
