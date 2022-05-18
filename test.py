@@ -1,3 +1,3 @@
-from urlscan.url_scan import *
+from monitoring import *
 
-scan_url("naver.com", 1)
+monitoring()

@@ -2,10 +2,10 @@ import yara
 import os
 import sys
 from D_alert import * 
-from urlscan.url_scan import *
+from url_scan import *
 from data import *
 
-def pt_search(target_path, c ,change_url):
+def pt_search(target_path, c ,change_url, b_siteurl):
     sys.stdout = open(log_file + str(c) + ".txt", 'w', encoding='utf-8')
 
     filenames = os.listdir(yara_rules_path)
@@ -21,10 +21,10 @@ def pt_search(target_path, c ,change_url):
                 rules = yara.compile(filepath=full_name)
                 match = rules.match(target_path)
             except yara.libyara_wrapper.YaraSyntaxError:
-                print("[*]syntax Error[*]")
+                print("*syntax Error*")
                 continue
             except UnicodeDecodeError:
-                print("[*]unicode decode error[*]")
+                print("*unicode decode error*")
                 continue
             if len(match):
                 matchnum = len(match['main'][0]['strings'])
@@ -37,5 +37,7 @@ def pt_search(target_path, c ,change_url):
                 print("No Detect")
     print("file num : ", filenum)
     sys.stdout.close()
-    if matchnum: scan_url(change_url, c)
+    if matchnum: 
+        return scan_url(change_url, c, b_siteurl)
+        
     
