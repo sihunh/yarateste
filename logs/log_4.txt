@@ -1,37 +1,27 @@
 rules\CVE-2012-0158.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_generic_maliciousness_BROAD_SCAN.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_obfuscation.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_phpmailer.yar
 No Detect
 rules\detect_small_malicios.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_small_uploader.yar
 No Detect
 rules\detect_webshell.yar
-[*]unicode decode error[*]
+*unicode decode error*
 rules\sql_inject_file_upload.yar
 No Detect
 rules\test.yar
-Detect num :  10
-Detect :  {'data': 'CMD', 'offset': 32352, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33208, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33235, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33292, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33327, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33474, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 33508, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmD', 'offset': 73179, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmD', 'offset': 74409, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 296266, 'identifier': '$a', 'flags': 27}
+No Detect
 rules\web_log_review.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\web_shells.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_APT_Laudanum.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_ASPXSpy.yar
 No Detect
 rules\WShell_ChinaChopper.yar

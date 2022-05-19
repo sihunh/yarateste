@@ -2,8 +2,10 @@
 연관 링크들 전부 분석해서 때려박아야하는 방법을 써야하기 때문에 시간이 좀 걸림 
 이런식으로 짜면 메모리 엄청 잡아먹을 듯함
 
+참조 https://chromedriver.chromium.org/capabilities
+
 chromedriver에서 검색하는 내용 전체 websrc_번호로 파일소스 넘김 
-yara룰에 의해서 해당 소스파일 패컨 검사 패턴 탐지시 D_alert로 넘어가서 wintoast 출력
+yara룰에 의해서 해당 소스파일 패컨 검사 패턴 탐지시 D_alert로 넘어가서 wintoast 출력 // wintoast 오류 개심함 바꿈
 yara 검사에 대한 로그는 logs 파일에 저장됨
 
 ############################################# 완 
@@ -21,6 +23,9 @@ virustotal의 api를 사용해서 판단이게 진짜 악성 url인지 판단
 drive by download 같은 공격이 발생하였을 경우 파일을 어차피 지혼자 받아야지기 때문에
 사이트 redirect 되어 파일이 자동으로 받아 졌다면 파일 해시값 따와서 
 일단 검사 시행후 해당 파일이 악성인지 아닌지 판단하고 실행만 안시키면됨
+
+1번 방법 프로세스 2개 만들어서 작성 = 해봤는데 안됨 
+2번 다운받았다는 event handle을 받고 처리 ? 
 
 파일 다운로드 default값 설정 경로 
 C:\\test_profile 로 저장됨

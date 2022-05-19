@@ -3,10 +3,11 @@ import time
 from data import *
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from D_alert import *
 
 class Target:
     watchDir = download_dir
-    #watchDir에 감시하려는 디렉토리를 명시한다.
+    #watchDir에 감시하려는 디렉토리를 명시
 
     def __init__(self):
         self.observer = Observer()   #observer객체를 만듦
@@ -25,20 +26,10 @@ class Target:
 
 class Handler(FileSystemEventHandler):
 #FileSystemEventHandler 클래스를 상속받음.
-#아래 핸들러들을 오버라이드 함
-
-    #파일, 디렉터리가 move 되거나 rename 되면 실행
-    def on_moved(self, event):
-        print(event)
+#오버라이드
 
     def on_created(self, event): #파일, 디렉터리가 생성되면 실행
-        print(event)
-
-    def on_deleted(self, event): #파일, 디렉터리가 삭제되면 실행
-        print(event)
-
-    def on_modified(self, event): #파일, 디렉터리가 수정되면 실행
-        print(event)
+        d_alert()
 
 def monitoring():
     w = Target()

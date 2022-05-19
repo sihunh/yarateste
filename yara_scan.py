@@ -5,7 +5,7 @@ from D_alert import *
 from url_scan import *
 from data import *
 
-def pt_search(target_path, c ,change_url, b_siteurl):
+def pt_search(target_path, c ,change_url):
     sys.stdout = open(log_file + str(c) + ".txt", 'w', encoding='utf-8')
 
     filenames = os.listdir(yara_rules_path)
@@ -32,12 +32,12 @@ def pt_search(target_path, c ,change_url, b_siteurl):
 
                 for i in match['main'][0]['strings']:
                     print("Detect : ", i)
-                d_alert()
             else:
                 print("No Detect")
     print("file num : ", filenum)
     sys.stdout.close()
     if matchnum: 
-        return scan_url(change_url, c, b_siteurl)
+       d_alert()
+       scan_url(change_url, c)
         
     

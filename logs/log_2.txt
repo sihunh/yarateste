@@ -1,93 +1,27 @@
 rules\CVE-2012-0158.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_generic_maliciousness_BROAD_SCAN.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_obfuscation.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_phpmailer.yar
 No Detect
 rules\detect_small_malicios.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_small_uploader.yar
 No Detect
 rules\detect_webshell.yar
-[*]unicode decode error[*]
+*unicode decode error*
 rules\sql_inject_file_upload.yar
 No Detect
 rules\test.yar
-Detect num :  66
-Detect :  {'data': 'cmd', 'offset': 160, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 12782, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 13086, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 13361, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 13705, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 13874, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 14035, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 14211, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 14550, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 14697, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 17047, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 17510, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 17696, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 17874, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 18052, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 18238, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 18674, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 22662, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 23002, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 23012, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 23085, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 23192, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 23623, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 24158, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 24205, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 24617, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 25288, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 25660, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 26056, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 26589, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 26842, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27320, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27497, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27609, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27854, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27931, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27958, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 27987, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 28339, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 28682, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 29089, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 29312, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 29479, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 29630, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 30230, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 30577, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 30694, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 30721, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 30991, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 31321, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 31795, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 32443, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 33088, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 33732, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 34273, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 34363, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 34442, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 34737, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 35286, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 35865, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 36483, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 37302, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 37420, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 60374, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cMD', 'offset': 72381, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'CMD', 'offset': 78648, 'identifier': '$a', 'flags': 27}
+No Detect
 rules\web_log_review.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\web_shells.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_APT_Laudanum.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_ASPXSpy.yar
 No Detect
 rules\WShell_ChinaChopper.yar

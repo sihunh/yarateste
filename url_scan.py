@@ -6,52 +6,49 @@ from data import *
 import threading
 import time
 import base64
+import os
 
-headers = {
-        "Accept": "application/json",
-        "x-apikey": "458e61cec8e8163ea8ffff08a8d97a4770dd10df103e5e276c0fcab773b82f9c",
-        "Content-Type": "application/x-www-form-urlencoded"
-}
+
 class Worker(threading.Thread):
-    def __init__(self, change_url, c, before_url):
+    def __init__(self, change_url, c):
         super().__init__()
-        self.change_url = str(change_url)   
-        self.c = c          
-        self.before_url= before_url
-    
+        self.change_url = str(change_url)            
+        self.filenames = os.listdir(url_scan_path)
     def run(self):
-        if "www" in self.change_url:
-            i = self.change_url.find("www")
-            l = self.change_url.index('/', i+4)
-            sitename = self.change_url[i+4:l]
-        try:
-            sitename_bytes = sitename.encode('ascii')
-            sitename_base64 = base64.b64encode(sitename_bytes)
-            sitename_base64 = str(sitename_base64)
-            length = len(sitename_base64)
-        except Exception:
-            print("Not Encoding")
+        if "//" in self.change_url:
+            i = self.change_url.find("//")
+            l = self.change_url.index('/', i+2)
+            sitename = self.change_url[i+2:l]
+            if "www" in sitename:
+                i = self.change_url.find("www")
+                l = self.change_url.index('/', i+4)
+                sitename = self.change_url[i+4:l]
+            try:
+                sitename_bytes = sitename.encode('ascii')
+                sitename_base64 = base64.b64encode(sitename_bytes)
+                sitename_base64 = str(sitename_base64)
+                length = len(sitename_base64)
+            except Exception:
+                print("Not Encoding")
         
-        if self.before_url == sitename:
-            return self.before_url
+        if  sitename not in self.filenames:
+            url = "https://www.virustotal.com/api/v3/urls"
+            report_url = "https://www.virustotal.com/api/v3/urls/" + sitename_base64[2:length-1]
+            payload = "url=" + sitename
+            
+            response = requests.post(url, data=payload, headers=headers)
+            if(response.status_code == 200):
+                time.sleep(3)
+                report_response = requests.get(report_url, headers=headers)
+                json_data=report_response.json()
+                with open(url_scan_path + sitename + url_ext, 'w') as outfile:
+                    json.dump(json_data, outfile)
+            else:
+                print("Error")
 
-        url = "https://www.virustotal.com/api/v3/urls"
-        report_url = "https://www.virustotal.com/api/v3/urls/" + sitename_base64[2:length-1]
-        payload = "url=" + sitename
-        
-        response = requests.post(url, data=payload, headers=headers)
-        if(response.status_code == 200):
-            time.sleep(30)
-            report_response = requests.get(report_url, headers=headers)
-            json_data=report_response.json()
-            with open(url_scan_path + sitename + "_" + str(self.c) + url_ext, 'w') as outfile:
-                json.dump(json_data, outfile)
-            return sitename
-        else:
-            print("Error")
-
-def scan_url(change_url, c, before_url):
-    t1 = Worker(change_url, c, before_url)
+def scan_url(change_url, c):
+    t1 = Worker(change_url, c)
+    t1.setDaemon(True)
     t1.start()
     
 

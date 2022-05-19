@@ -1,17 +1,17 @@
 rules\CVE-2012-0158.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_generic_maliciousness_BROAD_SCAN.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_obfuscation.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_phpmailer.yar
 No Detect
 rules\detect_small_malicios.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\detect_small_uploader.yar
 No Detect
 rules\detect_webshell.yar
-[*]unicode decode error[*]
+*unicode decode error*
 rules\sql_inject_file_upload.yar
 No Detect
 rules\test.yar
@@ -22,11 +22,11 @@ Detect :  {'data': 'cmd', 'offset': 2353, 'identifier': '$a', 'flags': 27}
 Detect :  {'data': 'cmd', 'offset': 2370, 'identifier': '$a', 'flags': 27}
 Detect :  {'data': 'cmd', 'offset': 2393, 'identifier': '$a', 'flags': 27}
 rules\web_log_review.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\web_shells.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_APT_Laudanum.yar
-[*]syntax Error[*]
+*syntax Error*
 rules\WShell_ASPXSpy.yar
 No Detect
 rules\WShell_ChinaChopper.yar
