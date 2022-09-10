@@ -5,9 +5,9 @@ import webbrowser
 page_url = 'http://example.com/' 
 
 def open_url():
-    try: 
+    try:
         webbrowser.open_new(page_url)
-    except: 
+    except:
         print('Failed to open URL. Unsupported variable type.')
         
 def d_alert():

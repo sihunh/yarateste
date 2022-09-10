@@ -1,19 +1,23 @@
+# selenium, yara, chromedrivermanger, bs4
 from yara_scan import *
 from url_src import *
 from data import *
-from re import search
 from selenium import webdriver
 from bs4 import BeautifulSoup
-from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+
+from webdriver_manager.chrome import ChromeDriverManager
 
 def PWC():
+
     options = webdriver.ChromeOptions()
     options.add_argument("user-data-dir=\\test_profile")
-
+    
+    service = ChromeService(executable_path=ChromeDriverManager().install()) # 크롬 드라이버 자동으로 받아옴
     change_url = 'https://google.com'
     c=0
 
-    driver = webdriver.Chrome(driver_path, chrome_options=options, service_args=["--verbose", "--log-path=C:\\qc1.log"])
+    driver = webdriver.Chrome(service=service, chrome_options=options)
     driver.implicitly_wait(3)
     # url에 접근한다.
     driver.get(change_url)

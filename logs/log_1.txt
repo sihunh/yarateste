@@ -15,12 +15,8 @@ rules\detect_webshell.yar
 rules\sql_inject_file_upload.yar
 No Detect
 rules\test.yar
-Detect num :  5
-Detect :  {'data': 'cmd', 'offset': 2216, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 2239, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 2353, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 2370, 'identifier': '$a', 'flags': 27}
-Detect :  {'data': 'cmd', 'offset': 2393, 'identifier': '$a', 'flags': 27}
+Detect num :  1
+Detect :  {'data': 'cMD', 'offset': 23275, 'identifier': '$a', 'flags': 27}
 rules\web_log_review.yar
 *syntax Error*
 rules\web_shells.yar
