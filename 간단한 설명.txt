@@ -6,7 +6,7 @@
 참조 https://chromedriver.chromium.org/capabilities
 
 chromedriver에서 검색하는 내용 전체 websrc_번호로 파일소스 넘김 
-yara룰에 의해서 해당 소스파일 패컨 검사 패턴 탐지시 D_alert로 넘어가서 wintoast 출력 // wintoast 오류 개심함 바꿈
+yara룰에 의해서 해당 소스파일 패컨 검사 패턴 탐지시 D_alert로 넘어가서 wintoast 출력 // wintoast 오류 심함 바꿈
 yara 검사에 대한 로그는 logs 파일에 저장됨
 
 ############################################# 완 
