@@ -7,6 +7,7 @@ import threading
 import time
 import base64
 import os
+from firebase_upload import *
 
 
 class Worker(threading.Thread):
@@ -41,10 +42,15 @@ class Worker(threading.Thread):
                 time.sleep(3)
                 report_response = requests.get(report_url, headers=headers)
                 json_data=report_response.json()
+
+                firebase_upload(json_data,'url_scan_rt',sitename) # db업로드 :: json_data, colletion_name, file_name
+                '''
                 with open(url_scan_path + sitename + url_ext, 'w') as outfile:
                     json.dump(json_data, outfile)
+                '''
             else:
                 print("Error")
+                
 
 def scan_url(change_url, c):
     t1 = Worker(change_url, c)

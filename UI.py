@@ -33,7 +33,7 @@ class MyApp(QWidget):
         btn2.clicked.connect(self.port_scan)
         btn2.clicked.connect(self.out_bound)
 
-        self.setWindowTitle('TEST')
+        self.setWindowTitle('TOOL')
         self.setGeometry(200, 200, 200, 250)
         self.show()
 
