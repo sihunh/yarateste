@@ -4,7 +4,6 @@ import sys
 from D_alert import * 
 from url_scan import *
 from data import *
-import random
 
 def pt_search(target_path, c ,change_url):
     file_path= log_file + str(c) + ".json"
@@ -56,5 +55,10 @@ def pt_search(target_path, c ,change_url):
     except Exception as e:
         print(f'FILE EXCEPTION: {str(e)}')
 
-    firebase_upload(json_data,'yara_scan', str(c)) # db업로드 :: json_data, colletion_name, file_name
+    if "//" in change_url:
+        i = change_url.find("//")
+        l = change_url.index('/', i+2)
+        sitename = change_url[i+2:l]
+
+    firebase_upload(json_data,'yara_scan', sitename) # db업로드 :: json_data, colletion_name, file_name
     
