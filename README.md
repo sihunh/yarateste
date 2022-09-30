@@ -39,7 +39,7 @@ virustotal의 api를 사용해서 판단이게 진짜 악성 url인지 판단
 
 해당 공개 api는 하루 500개 분당 4개 제한이 걸려있다.
 
-검사 시간 1분 정도 걸림 그래서 스레드로 돌림
+검사 시간 1분 정도 걸림 그래서 deamon 스레드로 돌림
 
 참조 https://developers.virustotal.com/reference/url-object
 
