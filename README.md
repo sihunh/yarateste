@@ -73,7 +73,7 @@ C:\\test_profile 로 저장됨
 
 Firebase cloud 연동 완료 
 
-웹페이지로 연동 * 진행중
+웹페이지로 연동 
 
 다음 해볼거
 
