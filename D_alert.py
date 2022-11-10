@@ -3,7 +3,7 @@
 import webbrowser
 
 # 웹사이트 만든곳으로 이동
-page_url = 'http://example.com/' 
+page_url = 'https://backward99.github.io/cani/#/' 
 
 def open_url():
     try:
