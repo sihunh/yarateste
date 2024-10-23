@@ -1,80 +1,65 @@
-# yarateste
-시간날때 마다 그냥 만들어 봅니다
+실시간으로 웹 페이지를 스캔하여 타이포스쿼팅 공격이나 악성 리다이렉션을 탐지합니다.
+주요 기능
 
-실행방법 UI.py 눌러서 하면됨
+실시간 URL 스캔: Chrome Driver를 활용한 웹페이지 소스 분석
+YARA 기반 패턴 탐지: 악성 코드 및 의심스러운 패턴 검사
+VirusTotal 연동: 2차 검증을 통한 정확도 향상
+자동 파일 다운로드 모니터링: Drive-by Download 공격 탐지
+스테가노그래피 탐지: 숨겨진 악성코드 패턴 분석
+Firebase Cloud 연동: 실시간 데이터 동기화 및 모니터링
 
-만들게 된 계기 
-20살때 타이퍼쿼스팅 공격을 당하여 이더월렛에 돈을 날려버린적이 있다.
+설치 방법
 
-해당 이더월렛 도메인과 비슷한 악성사이트로 리다이렉트가 일어나 거기에 암호화파일을 올리고 암호문을 적었던걸로 기억함.
+필수 요구사항:
 
-그런일을 막기위해 해당 프로그램을 만들어 보았음
+Python 3.8 이상
+Chrome Browser
+Chrome Driver
 
 
+패키지 설치:
 
-해당방법은 탐지하는 느낌이고 차단하려면 미리 악성 url의 blacklist를 만들거나 사이트 접속전 사이트에서 관련
+bashCopypip install -r requirements.txt
 
-연관 링크들 전부 분석해서 때려박아야하는 방법을 써야하기 때문에 시간이 좀 걸림 
+Chrome Driver 설정:
 
-이런식으로 짜면 메모리 엄청 잡아먹을 듯함
-
-참조 https://chromedriver.chromium.org/capabilities
-
-chromedriver에서 검색하는 내용 전체 websrc_번호로 파일소스 넘김 
-
-yara룰에 의해서 해당 소스파일 패컨 검사 패턴 탐지시 D_alert로 넘어가서 wintoast 출력 // wintoast 오류 심함 바꿈
-
-yara 검사에 대한 로그는 logs 파일에 저장됨
-
-############################################# 완 
+Chrome Driver 다운로드
+다운로드한 드라이버를 시스템 경로에 추가
 
 
 
-2차 검증
-yara rule에 의해 악성 url로 판단 되었을때 정확성을 따지기위해 2차 검증을 거친다.
+사용 방법
 
-virustotal의 api를 사용해서 판단이게 진짜 악성 url인지 판단
+UI.py 실행:
 
-해당 url가 악성 사이트인지 판단한다.
+bashCopypython UI.py
 
-해당 공개 api는 하루 500개 분당 4개 제한이 걸려있다.
+기본 설정:
 
-검사 시간 1분 정도 걸림 그래서 deamon 스레드로 돌림
-
-참조 https://developers.virustotal.com/reference/url-object
-
-############################################# 완 
-
-
-   
-drive by download 같은 공격이 발생하였을 경우 파일을 어차피 지혼자 받아야지기 때문에
-
-사이트 redirect 되어 파일이 자동으로 받아 졌다면 파일 해시값 따와서 
-
-일단 검사 시행후 해당 파일이 악성인지 아닌지 판단하고 실행만 안시키면됨
-
-1번 방법 프로세스 2개 만들어서 작성 o
-
-2번 로그분석해서 받으려고 했는데 며칠동안 찾아서 해봐도 안됨 x 
-
-불가능 일단 stackoverflow에 올려놓음
-
-파일 다운로드 default값 설정 경로 
-
-C:\\test_profile 로 저장됨
-
-다운로드 받은 파일은 C:\\test_download에 저장됨
-
-다운로드시 받은 파일 hex 값 가져와서 패턴 분석후 스테가노그래피 기술 적용 되었는지 탐지  
-
-############################################완
+다운로드 경로: C:\test_download
+프로필 경로: C:\test_profile
+로그 저장 경로: logs 폴더
 
 
 
-Firebase cloud 연동 완료 
+구조
+Copy├── UI.py                  # 메인 UI 
+├── rules/                 # YARA 룰 정의
+│   └── malicious.yar     # 악성코드 패턴
+├── logs/                  # 로그 파일
+└── modules/              # 핵심 모듈
+    ├── scanner.py        # URL 스캐너
+    ├── validator.py      # 2차 검증
+    └── monitor.py        # 파일 모니터링
+개발 배경
+20대 시절 타이포스쿼팅 공격으로 인한 이더리움 피해 경험을 바탕으로 개발되었습니다. 유사한 피싱 공격을 예방하고 사용자들의 자산을 보호하기 위해 만들어졌습니다.
+향후 계획
 
-웹페이지로 연동 
+네트워크 내 악성 DNS 트래픽 분석 탐지 기능 추가
+UI/UX 개선
+실시간 알림 시스템 강화
 
-다음 해볼거
+참고 자료
 
-*네트워크 내 악성 DNS 트래픽 분석 탐지
+Chrome Driver Capabilities
+VirusTotal API Documentation
