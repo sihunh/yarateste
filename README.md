@@ -1,65 +1,47 @@
-실시간으로 웹 페이지를 스캔하여 타이포스쿼팅 공격이나 악성 리다이렉션을 탐지합니다.
-주요 기능
+#이더리움 피싱 사이트 및 악성 URL을 탐지하기 위한 보안 도구입니다. 실시간으로 웹 페이지를 스캔하여 타이포스쿼팅 공격이나 악성 리다이렉션을 탐지합니다.
 
-실시간 URL 스캔: Chrome Driver를 활용한 웹페이지 소스 분석
-YARA 기반 패턴 탐지: 악성 코드 및 의심스러운 패턴 검사
-VirusTotal 연동: 2차 검증을 통한 정확도 향상
-자동 파일 다운로드 모니터링: Drive-by Download 공격 탐지
-스테가노그래피 탐지: 숨겨진 악성코드 패턴 분석
-Firebase Cloud 연동: 실시간 데이터 동기화 및 모니터링
+개발 배경
+20살때 타이퍼쿼스팅 공격을 당하여 이더월렛에 돈을 날려버린적이 있습니다. 해당 이더월렛 도메인과 비슷한 악성사이트로 리다이렉트가 일어나 거기에 암호화파일을 올리고 암호문을 적었던걸로 기억합니다. 그런일을 막기위해 해당 프로그램을 만들어 보았습니다.
+기능
 
-설치 방법
+실시간 URL 스캔 (Chrome Driver 활용)
+YARA 기반 패턴 탐지
+VirusTotal API 연동 2차 검증
+Drive-by Download 공격 탐지
+스테가노그래피 탐지
+Firebase Cloud 연동
 
-필수 요구사항:
+실행 방법
 
-Python 3.8 이상
-Chrome Browser
-Chrome Driver
+UI.py 실행
 
-
-패키지 설치:
-
-bashCopypip install -r requirements.txt
-
-Chrome Driver 설정:
-
-Chrome Driver 다운로드
-다운로드한 드라이버를 시스템 경로에 추가
-
-
-
-사용 방법
-
-UI.py 실행:
-
-bashCopypython UI.py
-
-기본 설정:
+주요 설정
 
 다운로드 경로: C:\test_download
 프로필 경로: C:\test_profile
-로그 저장 경로: logs 폴더
+로그 저장: logs 폴더
 
+구현 내용
+1차 검증
 
+chromedriver에서 검색하는 내용 전체 websrc_번호로 파일소스 저장
+YARA 룰에 의한 패턴 검사
+탐지시 wintoast 알림
+검사 로그는 logs 파일에 저장
 
-구조
-Copy├── UI.py                  # 메인 UI 
-├── rules/                 # YARA 룰 정의
-│   └── malicious.yar     # 악성코드 패턴
-├── logs/                  # 로그 파일
-└── modules/              # 핵심 모듈
-    ├── scanner.py        # URL 스캐너
-    ├── validator.py      # 2차 검증
-    └── monitor.py        # 파일 모니터링
-개발 배경
-20대 시절 타이포스쿼팅 공격으로 인한 이더리움 피해 경험을 바탕으로 개발되었습니다. 유사한 피싱 공격을 예방하고 사용자들의 자산을 보호하기 위해 만들어졌습니다.
-향후 계획
+2차 검증
 
-네트워크 내 악성 DNS 트래픽 분석 탐지 기능 추가
-UI/UX 개선
-실시간 알림 시스템 강화
+VirusTotal API 활용 악성 URL 확인
+API 제한: 일일 500개, 분당 4개
+검사 시간 약 1분 소요 (데몬 스레드로 실행)
 
-참고 자료
+파일 다운로드 모니터링
 
-Chrome Driver Capabilities
-VirusTotal API Documentation
+Drive by download 공격 대응
+다운로드된 파일 해시값 검증
+스테가노그래피 기술 탐지
+
+참고
+
+Chrome Driver: https://chromedriver.chromium.org/capabilities
+VirusTotal API: https://developers.virustotal.com/reference/url-object
